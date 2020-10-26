@@ -1,7 +1,7 @@
 <template>
-  <section class="bg-gray-800">
+  <section class="">
     <div>
-      <h1 class="">
+      <h1 class="font-sans">
         {{ $prismic.asText(hero.heading) }}
       </h1>
       <p>{{ $prismic.asText(hero.subheading) }}</p>
