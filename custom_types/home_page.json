@@ -1,0 +1,37 @@
+{
+  "Main": {
+    "hero_group": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "cover_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "cover_image"
+            }
+          },
+          "heading": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1",
+              "label": "Heading",
+              "placeholder": "Enter a heading"
+            }
+          },
+          "subheading": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "allowTargetBlank": true,
+              "label": "Subheading",
+              "placeholder": "Enter a subheading"
+            }
+          }
+        },
+        "label": "hero_group"
+      }
+    }
+  }
+}

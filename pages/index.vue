@@ -18,7 +18,7 @@ export default {
     PrismicHeroGroup,
   },
   async fetch() {
-    this.home = (await this.$prismic.api.getSingle('home')).data
+    this.home = (await this.$prismic.api.getSingle('home_page')).data
     this.hero = this.home.hero_group[0]
   },
   data() {
