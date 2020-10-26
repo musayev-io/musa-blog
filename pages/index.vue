@@ -1,24 +1,28 @@
 <template>
   <section>
-    <!-- <PrismicHomeBanner /> -->
+    <!-- <PrismicHeroGroup /> -->
     <!-- <p v-if="$fetchState.pending">Pending...</p>
     <p v-else-if="$fetchState.error">error...</p>
     <p v-else>{{ homepage }}</p> -->
     <!-- <p>{{ homepage }}</p> -->
-    <PrismicHomeBanner :hero="hero" />
+    <!-- <PrismicHeroGroup :hero="hero" /> -->
+    <BlogPostCard />
   </section>
 </template>
 
 <script>
-import PrismicHomeBanner from '~/components/prismic/PrismicHomeBanner.vue'
+// import PrismicHeroGroup from '~/components/prismic/PrismicHeroGroup.vue'
+import BlogPostCard from '~/components/BlogPostCard.vue'
 
 export default {
   name: 'Home',
   components: {
-    PrismicHomeBanner,
+    // PrismicHeroGroup,
+    BlogPostCard,
   },
   async fetch() {
-    this.home = (await this.$prismic.api.getSingle('home')).data
+    // Fetch Hero
+    this.home = (await this.$prismic.api.getSingle('home_page')).data
     this.hero = this.home.hero_group[0]
   },
   data() {
