@@ -8,13 +8,13 @@
           >
             {{ $prismic.asText(hero.heading) }}
           </h2>
-          <p class="mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
+          <!-- <p class="mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
             {{ $prismic.asText(hero.subheading) }}
-          </p>
+          </p> -->
         </div>
         <!-- Horizontal line -->
         <div
-          class="mt-12 grid gap-16 border-t-2 border-gray-100 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12"
+          class="mt-4 grid gap-16 border-t-2 border-gray-100 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12"
         >
           <!-- Blog card -->
           <div>
