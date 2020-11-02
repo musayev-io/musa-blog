@@ -1,14 +1,16 @@
 export default function (doc) {
+  console.log(doc)
   if (doc.isBroken) {
     return '/not-found'
   }
 
   if (doc.type === 'home') {
-    return '/'
+    return '/asdf'
   }
 
-  if (doc.type === 'page') {
-    return '/page/' + doc.uid
+  if (doc.type === 'posts') {
+    console.log('TYPE: POST')
+    return '/post/' + doc.uid
   }
 
   return '/not-found'

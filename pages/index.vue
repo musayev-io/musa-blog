@@ -5,35 +5,42 @@
     <p v-else-if="$fetchState.error">error...</p>
     <p v-else>{{ homepage }}</p> -->
     <!-- <p>{{ homepage }}</p> -->
-    <!-- <PrismicHeroGroup :hero="hero" /> -->
-    <BlogPostCard />
+    <PrismicHeroGroup :hero="hero" />
+    <BlogPosts :posts="blogPosts" />
   </section>
 </template>
 
 <script>
 // import PrismicHeroGroup from '~/components/prismic/PrismicHeroGroup.vue'
-import BlogPostCard from '~/components/BlogPostCard.vue'
+import BlogPosts from '~/components/BlogPosts.vue'
 
 export default {
   name: 'Home',
   components: {
     // PrismicHeroGroup,
-    BlogPostCard,
+    BlogPosts,
   },
   async fetch() {
-    // Fetch Hero
+    // Get home page
     this.home = (await this.$prismic.api.getSingle('home_page')).data
     this.hero = this.home.hero_group[0]
+    // Get blog posts
+    const prismicPostQuery = await this.$prismic.api.query(
+      this.$prismic.predicates.at('document.type', 'posts')
+    )
+    this.blogPosts = prismicPostQuery.results
   },
   data() {
     return {
       home: {},
       hero: {},
+      blogPosts: {},
     }
   },
   mounted() {
-    console.log(JSON.stringify(this.home))
-    console.log(JSON.stringify(this.hero))
+    // console.log(JSON.stringify(this.home))
+    // console.log(JSON.stringify(this.hero))
+    console.log(JSON.stringify(this.blogPosts))
   },
 }
 </script>

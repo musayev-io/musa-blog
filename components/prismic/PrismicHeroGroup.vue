@@ -8,9 +8,9 @@
           >
             {{ $prismic.asText(hero.heading) }}
           </h2>
-          <!-- <p class="mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
+          <p class="mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
             {{ $prismic.asText(hero.subheading) }}
-          </p> -->
+          </p>
         </div>
         <!-- Horizontal line -->
         <div
