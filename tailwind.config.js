@@ -13,7 +13,24 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
     },
+    typography: {
+      default: {
+        css: {
+          color: '#22282b',
+          strong: {
+            fontWeight: '800',
+          },
+          h1: {
+            color: '#08d69f',
+          },
+          h2: {
+            color: '#ff47c0',
+            font: 'mono',
+          },
+        },
+      },
+    },
   },
   variants: {},
-  plugins: [require('@tailwindcss/ui')],
+  plugins: [require('@tailwindcss/ui'), require('@tailwindcss/typography')],
 }

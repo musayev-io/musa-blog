@@ -6,20 +6,21 @@
     <p v-else>{{ homepage }}</p> -->
     <!-- <p>{{ homepage }}</p> -->
     <PrismicHeroGroup :hero="hero" />
-    <BlogPosts :posts="blogPosts" />
+    <PostsList :posts="blogPosts" />
   </section>
 </template>
 
 <script>
 // import PrismicHeroGroup from '~/components/prismic/PrismicHeroGroup.vue'
-import BlogPosts from '~/components/BlogPosts.vue'
+import PostsList from '~/components/PostsList.vue'
 
 export default {
   name: 'Home',
   components: {
     // PrismicHeroGroup,
-    BlogPosts,
+    PostsList,
   },
+  layout: 'default',
   async fetch() {
     // Get home page
     this.home = (await this.$prismic.api.getSingle('home_page')).data

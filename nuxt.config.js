@@ -20,7 +20,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [{ src: '~/plugins/prismic-links', ssr: false }],
+  // plugins: [{ src: '~/prismic/prismic-links', ssr: false }],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -47,11 +47,12 @@ export default {
 
   prismic: {
     endpoint: 'https://musa-blog.cdn.prismic.io/api/v2',
-    linkResolver: '@/plugins/link-resolver',
-    htmlSerializer: '@/plugins/html-serializer',
-    /* see configuration for more */
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+  loading: {
+    color: '#ff9500',
+    height: '5px',
+  },
 }

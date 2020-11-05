@@ -1,17 +1,12 @@
 <template>
   <div>
-    <PrismicHeader />
-    <nuxt />
+    <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
   </div>
 </template>
 
 <script>
-import PrismicHeader from '~/components/prismic/PrismicHeader'
-
 export default {
-  components: {
-    PrismicHeader,
-  },
+  components: {},
   head() {
     return {
       title: 'Prismic Nuxt.js Multi Page Website',

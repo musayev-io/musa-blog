@@ -12,7 +12,7 @@
     </div> -->
     <div v-for="{ id, uid, data } in posts" :key="id">
       <!-- <p>{{ post }}</p> -->
-      <!-- <prismic-link :field="serverless">Hello World</prismic-link> -->
+      <!-- <prismic-link :field="uid">{{ data.post_title[0].text }}</prismic-link> -->
       <NuxtLink :to="`post/${uid}`">{{ data.post_title[0].text }}</NuxtLink>
     </div>
   </div>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'BlogPosts',
+  name: 'PostsList',
   props: ['posts'],
   data() {
     return {
