@@ -13,6 +13,10 @@ export default {
         rel: 'stylesheet',
         href: 'https://rsms.me/inter/inter.css',
       },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.typekit.net/ctp0lmy.css',
+      },
     ],
   },
 

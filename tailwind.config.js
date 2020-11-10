@@ -10,7 +10,22 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        inter: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['nunito-sans', ...defaultTheme.fontFamily.sans],
+        termina: ['termina', ...defaultTheme.fontFamily.sans],
+        acumin: ['acumin-pro', ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        'owl-charcoal': '#000c1d',
+        'owl-pearl': '#001122',
+        'owl-nepal': '#8badc1',
+        'owl-stone': '#102a44',
+        'owl-turq': '#00f5d4',
+        'owl-org-pastel': '#febd41',
+        'owl-org-safety': '#ff9500',
+      },
+      fontSize: {
+        xxs: '.5rem',
       },
     },
     typography: {

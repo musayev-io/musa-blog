@@ -1,23 +1,26 @@
 <template>
   <section>
-    <!-- <PrismicHeroGroup /> -->
     <!-- <p v-if="$fetchState.pending">Pending...</p>
     <p v-else-if="$fetchState.error">error...</p>
     <p v-else>{{ homepage }}</p> -->
-    <!-- <p>{{ homepage }}</p> -->
-    <PrismicHeroGroup :hero="hero" />
-    <PostsList :posts="blogPosts" />
+    <hero-welcome :hero="hero" />
+    <main>
+      <recent-posts></recent-posts>
+      <PostsList :posts="blogPosts" />
+    </main>
   </section>
 </template>
 
 <script>
-// import PrismicHeroGroup from '~/components/prismic/PrismicHeroGroup.vue'
+import HeroWelcome from '~/components/prismic/HeroWelcome.vue'
+import RecentPosts from '~/components/RecentPosts.vue'
 import PostsList from '~/components/PostsList.vue'
 
 export default {
   name: 'Home',
   components: {
-    // PrismicHeroGroup,
+    HeroWelcome,
+    RecentPosts,
     PostsList,
   },
   layout: 'default',
