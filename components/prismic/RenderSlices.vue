@@ -22,7 +22,8 @@
 // Imports for all slices
 const QuoteSlice = () => import('~/components/prismic/slices/QuoteSlice.vue')
 const TextSlice = () => import('~/components/prismic/slices/TextSlice.vue')
-const ImageSlice = () => import('../components/prismic/slices/ImageSlice.vue')
+const ImageSlice = () => import('~/components/prismic/slices/ImageSlice.vue')
+
 export default {
   name: 'RenderSlices',
   components: {
@@ -30,6 +31,11 @@ export default {
     TextSlice,
     ImageSlice,
   },
-  props: ['slices'],
+  props: {
+    slices: {
+      type: Array,
+      required: true,
+    },
+  },
 }
 </script>

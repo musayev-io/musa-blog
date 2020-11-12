@@ -51,6 +51,8 @@ export default {
 
   prismic: {
     endpoint: 'https://musa-blog.cdn.prismic.io/api/v2',
+    // htmlSerializer: '@/plugins/prismic/html-serializer',
+    // linkResolver: '@/plugins/prismic/link-resolver',
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

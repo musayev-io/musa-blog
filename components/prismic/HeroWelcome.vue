@@ -29,18 +29,19 @@
           >Hello, I'm</span
         >
         <span
-          class="text-owl-org-safety font-termina font-normal tracking-wide text-4xl mt-2"
+          class="text-owl-org-safety font-termina font-normal tracking-wide text-4xl mt-1"
           >Musa Musayev 🤙🏼</span
         >
         <span
-          class="text-owl-nepal font-sans font-normal text-lg mt-2 max-w-2xl tracking-wide"
-          >I’m a solution architect and product owner for Deloitte.</span
-        >
+          class="text-owl-nepal font-pressura font-normal text-lg mt-6 max-w-2xl tracking-wide"
+          >I’m a solution architect and product owner for Deloitte.
+        </span>
         <span
-          class="text-owl-nepal font-sans font-hairline text-lg mt-2 max-w-2xl tracking-wide"
-          >I work primarily on AWS technologies, specializing in serverless
+          class="text-owl-nepal font-heading2 font-hairline text-lg mt-2 max-w-2xl tracking-wide"
+        >
+          I work primarily on AWS technologies, specializing in serverless
           solutions. This is a collection of my notes and thoughts, and help
-          those who are on a similar jouney as me.
+          those who are on a similar jouney as me
         </span>
       </div>
     </section>

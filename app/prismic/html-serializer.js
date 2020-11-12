@@ -45,7 +45,64 @@ export default function (type, element, content, children) {
     result = `<p class="${wrapperClassList.join(' ')}">${result}</p>`
     return result
   }
+  switch (type) {
+    case Elements.heading1:
+      return `<h1>${children.join('')}</h1>`
 
-  // Return null to stick with the default behavior for everything else
-  return null
+    case Elements.heading2:
+      return `<h2>${children.join('')}</h2>`
+
+    case Elements.heading3:
+      return `<h3>${children.join('')}</h3>`
+
+    case Elements.heading4:
+      return `<h4>${children.join('')}</h4>`
+
+    case Elements.heading5:
+      return `<h5>${children.join('')}</h5>`
+
+    case Elements.heading6:
+      return `<h6>${children.join('')}</h6>`
+
+    case Elements.paragraph:
+      return `<p class="text-owl-org-peach font-sans text-xl leading-8 py-4">${children.join(
+        ''
+      )}</p>`
+
+    case Elements.preformatted:
+      return `<pre>${children.join('')}</pre>`
+
+    case Elements.strong:
+      return `<strong>${children.join('')}</strong>`
+
+    case Elements.em:
+      return `<em>${children.join('')}</em>`
+
+    case Elements.listItem:
+      return `<li>${children.join('')}</li>`
+
+    case Elements.oListItem:
+      return `<li>${children.join('')}</li>`
+
+    case Elements.list:
+      return `<ul>${children.join('')}</ul>`
+
+    case Elements.oList:
+      return `<ol>${children.join('')}</ol>`
+
+    case Elements.embed:
+      return `
+        <div data-oembed="${element.oembed.embed_url}"
+          data-oembed-type="${element.oembed.type}"
+          data-oembed-provider="${element.oembed.provider_name}"
+        >
+          ${element.oembed.html}
+        </div>
+      `
+    case Elements.span:
+      return content ? content.replace(/\n/g, '<br />') : ''
+
+    default:
+      return null
+  }
 }

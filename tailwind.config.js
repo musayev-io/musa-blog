@@ -10,13 +10,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['Inter', ...defaultTheme.fontFamily.sans],
         sans: ['nunito-sans', ...defaultTheme.fontFamily.sans],
+        heading: ['termina', ...defaultTheme.fontFamily.sans],
+        heading1: ['t-star-pro', ...defaultTheme.fontFamily.sans],
+        heading2: ['chapeau', ...defaultTheme.fontFamily.mono],
+        pressura: ['gt-pressura', 'nunito-sans'],
         termina: ['termina', ...defaultTheme.fontFamily.sans],
         acumin: ['acumin-pro', ...defaultTheme.fontFamily.sans],
-        gothic: ['acme-gothic', ...defaultTheme.fontFamily.sans],
-        degular: ['degular', ...defaultTheme.fontFamily.sans],
-        neue: ['neue-haas-grotesk-text', ...defaultTheme.fontFamily.sans],
         oswald: ['oswalrd', ...defaultTheme.fontFamily.sans],
       },
       colors: {

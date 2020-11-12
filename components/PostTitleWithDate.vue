@@ -8,10 +8,10 @@
       <div class="flex flex-col">
         <span
           class="text-owl-turq text-left font-sans text-2xl font-semibold tracking-wider pt-2"
-          >Implementing Dark mode with TailwindCSS</span
         >
-        <span
-          class="text-owl-nepal text-sm font-sans font-hairline tracking-wide"
+          <nuxt-link :to="`post/${post.uid}`">{{ postTitle }}</nuxt-link></span
+        >
+        <span class="text-owl-nepal text-sm font-sans font-light tracking-wide"
           >Ante etiam mi habitasse suspendisse erat mollis</span
         >
       </div>
@@ -24,10 +24,27 @@ import BlogPostDate from '~/components/BlogPostDate.vue'
 import BlogPostTag from '~/components/BlogPostTag.vue'
 
 export default {
-  name: 'BlogPostSquareCard',
+  name: 'PostTitleWithDate',
   components: {
     BlogPostDate,
     BlogPostTag,
+  },
+  props: {
+    post: {
+      type: Object,
+      required: true,
+    },
+  },
+  data() {
+    return {}
+  },
+  computed: {
+    postTitle() {
+      return this.post.data.post_title[0].text
+    },
+  },
+  mounted() {
+    console.log(`Post: ${this.post}`)
   },
 }
 </script>

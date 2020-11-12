@@ -1,12 +1,20 @@
 <template>
-  <div class="bg-owl-charcoal p-2">
+  <div class="bg-owl-charcoal p-2 h-full">
+    <Header />
     <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Header from '~/components/Header.vue'
+import Footer from '~/components/Footer.vue'
+
 export default {
-  components: {},
+  components: {
+    Header,
+    Footer,
+  },
   head() {
     return {
       title: 'Prismic Nuxt.js Multi Page Website',

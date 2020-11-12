@@ -5,23 +5,25 @@
     <p v-else>{{ homepage }}</p> -->
     <hero-welcome :hero="hero" />
     <main>
-      <recent-posts></recent-posts>
-      <blog-posts-list :posts="blogPosts" />
+      <!-- <recent-posts></recent-posts> -->
+      <list-posts :posts="posts">
+        <h2 slot="title">My Posts</h2>
+      </list-posts>
     </main>
   </section>
 </template>
 
 <script>
 import HeroWelcome from '~/components/prismic/HeroWelcome.vue'
-import RecentPosts from '~/components/RecentPosts.vue'
-import BlogPostsList from '~/components/BlogPostsList.vue'
+// import RecentPosts from '~/components/RecentPosts.vue'
+import ListPosts from '~/components/ListPosts.vue'
 
 export default {
   name: 'Home',
   components: {
     HeroWelcome,
-    RecentPosts,
-    BlogPostsList,
+    // RecentPosts,
+    ListPosts,
   },
   layout: 'default',
   async fetch() {
@@ -32,19 +34,19 @@ export default {
     const prismicPostQuery = await this.$prismic.api.query(
       this.$prismic.predicates.at('document.type', 'posts')
     )
-    this.blogPosts = prismicPostQuery.results
+    this.posts = prismicPostQuery.results
   },
   data() {
     return {
       home: {},
       hero: {},
-      blogPosts: {},
+      posts: {},
     }
   },
   mounted() {
     // console.log(JSON.stringify(this.home))
     // console.log(JSON.stringify(this.hero))
-    console.log(JSON.stringify(this.blogPosts))
+    console.log(JSON.stringify(this.posts))
   },
 }
 </script>
