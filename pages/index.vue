@@ -6,7 +6,7 @@
     <hero-welcome :hero="hero" />
     <main>
       <recent-posts></recent-posts>
-      <PostsList :posts="blogPosts" />
+      <blog-posts-list :posts="blogPosts" />
     </main>
   </section>
 </template>
@@ -14,14 +14,14 @@
 <script>
 import HeroWelcome from '~/components/prismic/HeroWelcome.vue'
 import RecentPosts from '~/components/RecentPosts.vue'
-import PostsList from '~/components/PostsList.vue'
+import BlogPostsList from '~/components/BlogPostsList.vue'
 
 export default {
   name: 'Home',
   components: {
     HeroWelcome,
     RecentPosts,
-    PostsList,
+    BlogPostsList,
   },
   layout: 'default',
   async fetch() {

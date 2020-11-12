@@ -25,9 +25,11 @@
     </section> -->
     <section class="col-start-3 col-end-11">
       <div class="flex flex-col mt-16">
-        <span class="text-owl-org-pastel font-termina text-lg">Hello, I'm</span>
+        <span class="text-owl-org-pastel font-termina text-2xl"
+          >Hello, I'm</span
+        >
         <span
-          class="text-owl-org-safety font-termina font-normal tracking-wide text-2xl mt-2"
+          class="text-owl-org-safety font-termina font-normal tracking-wide text-4xl mt-2"
           >Musa Musayev 🤙🏼</span
         >
         <span
@@ -35,7 +37,7 @@
           >I’m a solution architect and product owner for Deloitte.</span
         >
         <span
-          class="text-owl-nepal font-sans font-normal text-lg mt-2 max-w-xl tracking-wide"
+          class="text-owl-nepal font-sans font-hairline text-lg mt-2 max-w-2xl tracking-wide"
           >I work primarily on AWS technologies, specializing in serverless
           solutions. This is a collection of my notes and thoughts, and help
           those who are on a similar jouney as me.

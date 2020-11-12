@@ -1,0 +1,9 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+.header-2 {
+    @apply text-2xl font-sans font-semibold tracking-wide text-white bg-owl-charcoal;
+}
