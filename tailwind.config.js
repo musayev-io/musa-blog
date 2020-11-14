@@ -12,12 +12,11 @@ module.exports = {
       fontFamily: {
         sans: ['nunito-sans', ...defaultTheme.fontFamily.sans],
         heading: ['termina', ...defaultTheme.fontFamily.sans],
-        heading1: ['t-star-pro', ...defaultTheme.fontFamily.sans],
-        heading2: ['chapeau', ...defaultTheme.fontFamily.mono],
-        pressura: ['gt-pressura', 'nunito-sans'],
+        pressure: ['pressure', 'serif'],
+        chapeau: ['chapeau', 'serif'],
         termina: ['termina', ...defaultTheme.fontFamily.sans],
         acumin: ['acumin-pro', ...defaultTheme.fontFamily.sans],
-        oswald: ['oswalrd', ...defaultTheme.fontFamily.sans],
+        oswald: ['oswald', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         'owl-charcoal': '#000c1d',
@@ -29,9 +28,6 @@ module.exports = {
         'owl-org-peach': '#ffdab9',
         'owl-org-pastel': '#febd41',
         'owl-org-safety': '#ff9500',
-      },
-      fontSize: {
-        xxs: '.5rem',
       },
     },
     typography: {

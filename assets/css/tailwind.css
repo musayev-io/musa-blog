@@ -5,48 +5,11 @@
 @import 'tailwindcss/utilities';
 
 /* fonts */
-/* @import '~assets/css/fonts';
- */
-
- @font-face {
-   font-family: gt-pressura;
-   font-weight: 300;
-   src: url('~/assets/fonts/gt-pressura/gt-pressura-light.woff') format('woff'),
- }
-
- @font-face {
-   font-family: gt-pressura;
-   font-weight: 400;
-   src: url('~/assets/fonts/gt-pressura/gt-pressura-regular.woff') format('woff'),
- }
-
- @font-face {
-   font-family: gt-pressura;
-   font-weight: 700;
-   src: url('~/assets/fonts/gt-pressura/gt-pressura-bold.woff') format('woff'),
- }
-
- @font-face {
-   font-family: t-star-pro;
-   font-weight: 700;
-   src: url('~/assets/fonts/t-star-pro/T-Star Pro Bold.otf') format('otf'),
- }
-
- @font-face {
-   font-family: t-star-pro;
-   font-weight: 400;
-   src: url('~/assets/fonts/t-star-pro/T-Star Pro Regular.otf') format('otf'),
- }
-
- @font-face {
-   font-family: chapeau;
-   font-weight: 400;
-   src: url('~/assets/fonts/chapeau/Chapeau-Regular.otf') format('otf'),
- }
+@import '~assets/css/fonts';
 
 /* Designs for @apply */
-@layer components {
+/* @layer components {
     .nav-links {
         @apply text-base uppercase font-sans text-owl-org-peach justify-items-end
     }
-}
+} */
