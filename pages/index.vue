@@ -6,7 +6,7 @@
     <hero-welcome :hero="hero" />
     <main>
       <div class="grid grid-cols-12">
-        <div class="col-start-3 col-end-11">
+        <div class="col-start-4 col-end-10">
           <div
             class="t-heading text-2xl text-white bg-owl-charcoal mt-16 mb-4 border-red-500"
           >

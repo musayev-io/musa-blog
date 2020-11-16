@@ -23,7 +23,7 @@
         </div>
       </div>
     </section> -->
-    <section class="col-start-3 col-end-11">
+    <section class="col-start-4 col-end-10">
       <div class="flex flex-col mt-16">
         <span class="text-m-orange-3 t-body text-2xl">Hello, I'm</span>
         <span class="t-display text-m-orange-2 text-6xl mt-1"
