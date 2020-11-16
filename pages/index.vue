@@ -5,24 +5,28 @@
     <p v-else>{{ homepage }}</p> -->
     <hero-welcome :hero="hero" />
     <main>
-      <!-- <recent-posts></recent-posts> -->
-      <list-posts :posts="posts">
-        <h2 slot="title">My Posts</h2>
-      </list-posts>
+      <div class="grid grid-cols-12">
+        <div class="col-start-3 col-end-11">
+          <div
+            class="t-heading text-2xl text-white bg-owl-charcoal mt-16 mb-4 border-red-500"
+          >
+            Recent Posts
+          </div>
+          <list-posts :posts="posts" />
+        </div>
+      </div>
     </main>
   </section>
 </template>
 
 <script>
 import HeroWelcome from '~/components/prismic/HeroWelcome.vue'
-// import RecentPosts from '~/components/RecentPosts.vue'
 import ListPosts from '~/components/ListPosts.vue'
 
 export default {
   name: 'Home',
   components: {
     HeroWelcome,
-    // RecentPosts,
     ListPosts,
   },
   layout: 'default',

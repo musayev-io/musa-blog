@@ -1,17 +1,18 @@
 <template>
-  <div class="flex mt-6 items-start">
+  <div class="flex justify-start justify-items-start mt-6 mb-6">
     <!-- date -->
-    <blog-post-date />
-    <div class="mt-4 px-8">
-      <blog-post-tag class="bg-owl-org-safety text-owl-charcoal" />
+    <blog-post-date class="ml-10 mr-14" />
+    <div class="">
+      <!-- tags -->
+      <blog-post-tag class="bg-m-blue-3">
+        <slot>aws</slot>
+      </blog-post-tag>
       <!-- title & description -->
       <div class="flex flex-col">
-        <span
-          class="text-owl-turq text-left font-sans text-2xl font-semibold tracking-wider pt-2"
-        >
+        <span class="text-m-orange-3 t-display text-3xl tracking-wider pt-4">
           <nuxt-link :to="`post/${post.uid}`">{{ postTitle }}</nuxt-link></span
         >
-        <span class="text-owl-nepal text-sm font-sans font-light tracking-wide"
+        <span class="text-m-blue-2 t- pt-1"
           >Ante etiam mi habitasse suspendisse erat mollis</span
         >
       </div>

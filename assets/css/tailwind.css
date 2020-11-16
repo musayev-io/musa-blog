@@ -8,8 +8,26 @@
 @import '~assets/css/fonts';
 
 /* Designs for @apply */
-/* @layer components {
-    .nav-links {
-        @apply text-base uppercase font-sans text-owl-org-peach justify-items-end
-    }
-} */
+@layer components {
+  .t-test {
+    @apply text-white border border-red-500;
+  }
+  .t-america {
+    @apply font-america font-medium;
+  }
+  .t-display {
+    @apply font-display font-bold tracking-wide;
+  }
+  .t-body {
+    @apply font-body font-normal;
+  }
+  .t-heading {
+    @apply font-heading font-medium;
+  }
+  .t-subheading {
+    @apply font-subheading font-normal;
+  }
+  .t-mono {
+    @apply font-monospace lowercase tracking-wide;
+  }
+}

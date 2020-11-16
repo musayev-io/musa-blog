@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col justify-center pt-4">
-    <div class="text-owl-org-peach font-sans text-center font-semibold">
-      JAN 10
+  <div class="flex flex-col justify-start">
+    <div class="">
+      <span class="text-m-blue-2 t-subheading text-sm text-center">
+        JAN 2020
+      </span>
     </div>
-    <div class="text-owl-pictone font-sans text-sm text-center font-semibold">
-      2020
-    </div>
+    <span class="text-m-orange-1 t-america text-2xl text-center"> 10 </span>
   </div>
 </template>
 

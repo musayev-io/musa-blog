@@ -1,10 +1,10 @@
 <template>
   <footer class="flex flex-col pt-20 items-center mb-12 mt-4">
-    <span class="text-base font-termina lowercase text-owl-org-peach"
+    <span class="t-heading lowercase text-m-blue-3"
       >Made with ❤️ from Nashville</span
     >
     <span
-      class="text-owl-org-peach lowercase text-xs font-sans tracking-tighter"
+      class="text-m-blue-2 t-mono text-sm lowercase font-sans tracking-tighter mt-1"
       >Musa Musayev &#169; {{ year }}
     </span>
   </footer>

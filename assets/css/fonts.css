@@ -5,16 +5,73 @@
     url('~assets/fonts/Roboto.woff') format('woff');
 } */
 
- /* @font-face {
+/* @font-face {
    font-family: gt-pressura;
    font-weight: 300;
    src: url('~assets/fonts/gt-pressura/gt-pressura-light.woff') format('woff'),
  } */
+@font-face {
+  font-family: america;
+  font-weight: 500;
+  src: url('~assets/fonts/america/america-standard-medium.woff2')
+    format('woff2');
+  font-style: normal;
+}
+@font-face {
+  font-family: america-condensed;
+  font-weight: 400;
+  src: url('~assets/fonts/america/america-condensed-regular.woff2')
+    format('woff2');
+  font-style: normal;
+}
+@font-face {
+  font-family: america-condensed;
+  font-weight: 500;
+  src: url('~assets/fonts/america/america-condensed-medium.woff2')
+    format('woff2');
+  font-style: normal;
+}
 
 @font-face {
-  font-family: pressure;
+  font-family: america-extended;
+  font-weight: 500;
+  src: url('~assets/fonts/america/america-extended-regular.woff2')
+    format('woff2');
+  font-style: normal;
+}
+@font-face {
+  font-family: america-extended;
+  font-weight: 700;
+  src: url('~assets/fonts/america/america-extended-bold.woff2') format('woff2');
+  font-style: normal;
+}
+@font-face {
+  font-family: chapeau;
   font-weight: 400;
-  src: url('~assets/fonts/gt-pressura/gt-pressura-regular.woff') format('woff')
+  src: url('~assets/fonts/chapeau/chapeau-mono.woff2') format('woff2');
+  font-style: normal;
+}
+@font-face {
+  font-family: maison-neue-extended;
+  font-weight: 400;
+  src: url('~assets/fonts/maison/maison-neue-extended-book.woff2')
+    format('woff2');
+  font-style: normal;
+
+  font-style: normal;
+}
+@font-face {
+  font-family: sectra-display;
+  font-weight: 700;
+  src: url('~assets/fonts/sectra/sectra-display-bold.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: sectra-display;
+  font-weight: 700;
+  src: url('~assets/fonts/sectra/sectra-display-bold-italic.woff')
+    format('woff');
+  font-style: italic;
 }
 /* @font-face {
   font-family: pressure;
@@ -39,15 +96,3 @@
    font-weight: 400;
    src: url('~assets/fonts/t-star-pro/T-Star Pro Regular.otf') format('otf'),
  } */
-
- @font-face {
-   font-family: chapeau;
-   font-weight: 400;
-   src: url('~assets/fonts/chapeau/Chapeau-Regular.woff2') format('woff2'),
- }
-
- @font-face {
-   font-family: chapeau;
-   font-weight: 400;
-   src: url('/fonts/chapeau/Chapeau-Regular.woff2') format('woff2'),
- }

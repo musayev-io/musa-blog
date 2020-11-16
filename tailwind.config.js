@@ -10,15 +10,22 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['nunito-sans', ...defaultTheme.fontFamily.sans],
-        heading: ['termina', ...defaultTheme.fontFamily.sans],
-        pressure: ['pressure', 'serif'],
-        chapeau: ['chapeau', 'serif'],
-        termina: ['termina', ...defaultTheme.fontFamily.sans],
-        acumin: ['acumin-pro', ...defaultTheme.fontFamily.sans],
-        oswald: ['oswald', ...defaultTheme.fontFamily.sans],
+        america: ['america', ...defaultTheme.fontFamily.mono],
+        heading: ['america-extended', ...defaultTheme.fontFamily.mono],
+        subheading: ['america-condensed', ...defaultTheme.fontFamily.mono],
+        monospace: ['chapeau', ...defaultTheme.fontFamily.mono],
+        body: ['maison-neue-extended', ...defaultTheme.fontFamily.mono],
+        display: ['sectra-display', ...defaultTheme.fontFamily.mono],
       },
       colors: {
+        m: {
+          'blue-1': '#000c1d',
+          'blue-2': '#8badc1',
+          'blue-3': '#bafaf8',
+          'orange-1': '#ff9500',
+          'orange-2': '#febd41',
+          'orange-3': '#ffdab9',
+        },
         'owl-charcoal': '#000c1d',
         'owl-pearl': '#001122',
         'owl-nepal': '#8badc1',
