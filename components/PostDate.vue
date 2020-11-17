@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-start">
     <div class="">
-      <span class="text-m-blue-2 t-subheading text-sm text-center">
+      <span class="text-m-blue-2 font-mono text-sm text-center">
         JAN 2020
       </span>
     </div>
@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: 'BlogPostDate',
+  name: 'PostDate',
 }
 </script>

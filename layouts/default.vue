@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-owl-charcoal h-screen">
+  <div class="bg-m-blue-1">
     <Header />
     <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
     <Footer />

@@ -13,9 +13,10 @@ module.exports = {
         america: ['america', ...defaultTheme.fontFamily.mono],
         heading: ['america-extended', ...defaultTheme.fontFamily.mono],
         subheading: ['america-condensed', ...defaultTheme.fontFamily.mono],
-        monospace: ['chapeau', ...defaultTheme.fontFamily.mono],
-        body: ['maison-neue-extended', ...defaultTheme.fontFamily.mono],
-        display: ['sectra-display', ...defaultTheme.fontFamily.mono],
+        mono: ['t-star-tw', ...defaultTheme.fontFamily.mono],
+        maison: ['maison-neue-extended', ...defaultTheme.fontFamily.mono],
+        body: ['walsheim', ...defaultTheme.fontFamily.mono],
+        display: ['adieu', ...defaultTheme.fontFamily.mono],
       },
       colors: {
         m: {

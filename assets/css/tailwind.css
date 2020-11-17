@@ -28,6 +28,9 @@
     @apply font-subheading font-normal;
   }
   .t-mono {
-    @apply font-monospace lowercase tracking-wide;
+    @apply font-mono;
+  }
+  .inline-code {
+    @apply border-red-500 border;
   }
 }

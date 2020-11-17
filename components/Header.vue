@@ -1,20 +1,14 @@
 <template>
-  <nav class="grid grid-cols-12 pt-8">
+  <nav class="grid grid-cols-12 pt-8 bg-m-blue-1">
     <div class="col-start-4 col-end-10">
       <div class="flex gap-8 justify-end">
-        <nuxt-link
-          to="/"
-          class="text-base font-heading uppercase font-medium text-m-blue-3"
+        <nuxt-link to="/" class="font-mono text-lg uppercase text-m-blue-3"
           >Home</nuxt-link
         >
-        <nuxt-link
-          to="/"
-          class="text-base font-heading uppercase font-medium text-m-blue-3"
+        <nuxt-link to="/" class="font-mono text-lg uppercase text-m-blue-3"
           >About</nuxt-link
         >
-        <nuxt-link
-          to="/"
-          class="text-base font-heading uppercase font-medium text-m-blue-3"
+        <nuxt-link to="/" class="font-mono text-lg uppercase text-m-blue-3"
           >Blog</nuxt-link
         >
       </div>

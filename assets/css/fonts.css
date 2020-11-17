@@ -1,15 +1,45 @@
-/* @font-face {
-  font-family: Underground;
+@font-face {
+  font-family: adieu;
+  font-weight: 300;
+  src: url('~assets/fonts/adieu/adieu-light.woff2') format('woff2');
+  font-style: normal;
+}
+@font-face {
+  font-family: adieu;
+  font-weight: 300;
+  src: url('~assets/fonts/adieu/adieu-light-slanted.woff2') format('woff2');
+  font-style: italic;
+}
+@font-face {
+  font-family: adieu;
   font-weight: 400;
-  src: url('~assets/fonts/Roboto.woff2') format('woff2'),
-    url('~assets/fonts/Roboto.woff') format('woff');
-} */
-
-/* @font-face {
-   font-family: gt-pressura;
-   font-weight: 300;
-   src: url('~assets/fonts/gt-pressura/gt-pressura-light.woff') format('woff'),
- } */
+  src: url('~assets/fonts/adieu/adieu.woff2') format('woff2');
+  font-style: normal;
+}
+@font-face {
+  font-family: adieu;
+  font-weight: 400;
+  src: url('~assets/fonts/adieu/adieu-slanted.woff2') format('woff2');
+  font-style: italic;
+}
+@font-face {
+  font-family: adieu;
+  font-weight: 700;
+  src: url('~assets/fonts/adieu/adieu-bold.woff2') format('woff2');
+  font-style: normal;
+}
+@font-face {
+  font-family: adieu;
+  font-weight: 700;
+  src: url('~assets/fonts/adieu/adieu-bold-slanted.woff2') format('woff2');
+  font-style: italic;
+}
+@font-face {
+  font-family: america;
+  font-weight: 400;
+  src: url('~assets/fonts/america/america-standard.woff2') format('woff2');
+  font-style: normal;
+}
 @font-face {
   font-family: america;
   font-weight: 500;
@@ -31,7 +61,6 @@
     format('woff2');
   font-style: normal;
 }
-
 @font-face {
   font-family: america-extended;
   font-weight: 500;
@@ -46,10 +75,18 @@
   font-style: normal;
 }
 @font-face {
-  font-family: chapeau;
-  font-weight: 400;
-  src: url('~assets/fonts/chapeau/chapeau-mono.woff2') format('woff2');
+  font-family: maison-neue-extended;
+  font-weight: 300;
+  src: url('~assets/fonts/maison/maison-neue-extended-light.woff2')
+    format('woff2');
   font-style: normal;
+}
+@font-face {
+  font-family: maison-neue-extended;
+  font-weight: 300;
+  src: url('~assets/fonts/maison/maison-neue-extended-light-italic.woff2')
+    format('woff2');
+  font-style: italic;
 }
 @font-face {
   font-family: maison-neue-extended;
@@ -57,42 +94,75 @@
   src: url('~assets/fonts/maison/maison-neue-extended-book.woff2')
     format('woff2');
   font-style: normal;
-
+}
+@font-face {
+  font-family: t-star-tw;
+  font-weight: 400;
+  src: url('~assets/fonts/t-star/t-star-tw-pro.woff2') format('woff2');
   font-style: normal;
 }
 @font-face {
-  font-family: sectra-display;
+  font-family: t-star-tw;
   font-weight: 700;
-  src: url('~assets/fonts/sectra/sectra-display-bold.woff') format('woff');
+  src: url('~assets/fonts/t-star/t-star-tw-pro-bold.woff2') format('woff2');
   font-style: normal;
 }
 @font-face {
-  font-family: sectra-display;
-  font-weight: 700;
-  src: url('~assets/fonts/sectra/sectra-display-bold-italic.woff')
+  font-family: walsheim;
+  font-weight: 200;
+  src: url('~assets/fonts/walsheim/gt-walsheim-thin.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: walsheim;
+  font-weight: 200;
+  src: url('~assets/fonts/walsheim/gt-walsheim-thin-oblique.woff')
     format('woff');
-  font-style: italic;
+  font-style: oblique;
 }
-/* @font-face {
-  font-family: pressure;
+@font-face {
+  font-family: walsheim;
+  font-weight: 200;
+  src: url('~assets/fonts/walsheim/gt-walsheim-thin-oblique.woff')
+    format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: walsheim;
+  font-weight: 300;
+  src: url('~assets/fonts/walsheim/gt-walsheim-light.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: walsheim;
+  font-weight: 300;
+  src: url('~assets/fonts/walsheim/gt-walsheim-light-oblique.woff')
+    format('woff');
+  font-style: oblique;
+}
+@font-face {
+  font-family: walsheim;
+  font-weight: 400;
+  src: url('~assets/fonts/walsheim/gt-walsheim-regular.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: walsheim;
+  font-weight: 400;
+  src: url('~assets/fonts/walsheim/gt-walsheim-thin-oblique.woff')
+    format('woff');
+  font-style: oblique;
+}
+@font-face {
+  font-family: walsheim;
   font-weight: 700;
-  src: url('~assets/fonts/gt-pressura/gt-pressura-bold.woff') format('woff')
-} */
-
-/* @font-face {
-   font-family: gt-pressura;
-   font-weight: 700;
-   src: url('~assets/fonts/gt-pressura/gt-pressura-bold.woff') format('woff'),
- }
-
- @font-face {
-   font-family: t-star-pro;
-   font-weight: 700;
-   src: url('~assets/fonts/t-star-pro/T-Star Pro Bold.otf') format('otf'),
- }
-
- @font-face {
-   font-family: t-star-pro;
-   font-weight: 400;
-   src: url('~assets/fonts/t-star-pro/T-Star Pro Regular.otf') format('otf'),
- } */
+  src: url('~assets/fonts/walsheim/gt-walsheim-bold.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: walsheim;
+  font-weight: 700;
+  src: url('~assets/fonts/walsheim/gt-walsheim-bold-oblique.woff')
+    format('woff');
+  font-style: oblique;
+}
