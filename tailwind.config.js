@@ -56,6 +56,8 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    backgroundImage: ['responsive', 'hover'],
+  },
   plugins: [require('@tailwindcss/ui'), require('@tailwindcss/typography')],
 }

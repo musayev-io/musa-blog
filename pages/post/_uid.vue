@@ -6,14 +6,14 @@
     <article v-else class="">
       <div class="grid grid-cols-12 mt-20">
         <div class="col-start-4 col-end-10">
-          <div class="flex flex-col">
+          <div class="flex flex-col px-20">
             <h1
               class="text-m-orange-3 font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4"
             >
               {{ postTitle }}
             </h1>
             <span class="font-maison font-light text-sm text-m-blue-2 pt-4 mb-4"
-              >Written on {{ postDate }}</span
+              >Written by <strong>Musa Musayev</strong> on {{ postDate }}</span
             >
             <!-- TODO :: Iterate through tags -->
             <div class="flex">
@@ -27,10 +27,10 @@
                 <slot>lambdas</slot>
               </post-tag>
             </div>
+            <render-slices class="" :slices="meta.slices" />
           </div>
         </div>
       </div>
-      <render-slices :slices="meta.slices" />
     </article>
   </div>
 </template>
@@ -93,3 +93,4 @@ export default {
   },
 }
 </script>
+<style scoped></style>

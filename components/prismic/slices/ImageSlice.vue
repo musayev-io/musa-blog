@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-12">
+  <div class="">
     <template v-if="label === 'full-screen'">
       <!-- need to do position: absolute; w & h: 100; background: grey with light opacity -->
       <div
@@ -8,7 +8,7 @@
       ></div>
     </template>
     <template v-else-if="label === 'post-preview'">
-      <div class="col-start-4 col-end-10">
+      <div class="">
         <prismic-image class="my-6" :field="img" />
         <!-- <template v-if="$prismic.asText(caption) != ''">
           <p>

@@ -31,6 +31,9 @@
     @apply font-mono;
   }
   .inline-code {
-    @apply border-red-500 border;
+    @apply font-mono text-m-blue-3 bg-gray-300 rounded-sm;
+  }
+  .inline-link {
+    @apply font-bold border border-b-2 border-m-blue-3;
   }
 }
