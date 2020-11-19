@@ -55,12 +55,12 @@ export default function (type, element, content, children) {
       return `<h1>${children.join('')}</h1>`
 
     case Elements.heading2:
-      return `<h2 class="text-m-orange-2 font-heading font-bold text-4xl mt-8 mb-6">${children.join(
+      return `<h2 class="text-m-orange-2 font-heading text-4xl mt-8 mb-6">${children.join(
         ''
       )}</h2>`
 
     case Elements.heading3:
-      return `<h3 class="text-m-blue-2 font-heading font-bold text-3xl mt-6 mb-6">${children.join(
+      return `<h3 class="text-m-blue-2 font-heading text-3xl mt-6 mb-6">${children.join(
         ''
       )}</h3>`
 
@@ -77,7 +77,6 @@ export default function (type, element, content, children) {
       if (children[0] === '') {
         return
       }
-      console.log(children)
       return `<p class="text-white font-body text-2xl tracking leading-normal py-4">${children.join(
         ''
       )}</p>`
