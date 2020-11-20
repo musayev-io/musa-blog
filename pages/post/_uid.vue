@@ -27,8 +27,10 @@
                 <slot>lambdas</slot>
               </post-tag>
             </div>
-            <render-slices class="" :slices="meta.slices" />
           </div>
+        </div>
+        <div class="col-start-5 col-end-10">
+          <render-slices class="" :slices="meta.slices" />
         </div>
       </div>
     </article>
