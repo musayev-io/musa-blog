@@ -9,27 +9,6 @@
 
 /* Designs for @apply */
 @layer components {
-  .t-test {
-    @apply text-white border border-red-500;
-  }
-  .t-america {
-    @apply font-america font-medium;
-  }
-  .t-display {
-    @apply font-display font-bold tracking-wide;
-  }
-  .t-body {
-    @apply font-body font-normal;
-  }
-  .t-heading {
-    @apply font-heading font-medium;
-  }
-  .t-subheading {
-    @apply font-subheading font-normal;
-  }
-  .t-mono {
-    @apply font-mono;
-  }
   .inline-code {
     @apply font-mono text-xl font-bold text-gray-800 bg-m-blue-3 rounded-lg px-2 py-1 mx-2;
   }
