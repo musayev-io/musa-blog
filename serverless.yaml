@@ -1,0 +1,40 @@
+service: musa-blog
+
+plugins:
+  - serverless-plugin-epsagon
+  - serverless-apigw-binary
+  - serverless-domain-manager
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ${opt:region}
+  stage: ${opt:stage, 'dev'}
+  environment:
+    NODE_ENV: ${self:provider.stage}
+
+custom:
+  config: ${file(sls/config/${self:provider.stage}.yaml)}
+  apigwBinary:
+    types:
+      - '*/*'
+  customDomain:
+    # hostedZoneId: Z0839808Z4EUW6S6W9E7
+    domainName: ${self:custom.config.domainName}
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: true
+    endpointType: 'regional'
+    securityPolicy: tls_1_2
+    apiType: rest
+    # certificateName: '${self:custom.domainName.${self:custom.stage}}'
+    # autoDomain: true
+  epsagon:
+    token: '374923e6-8272-4e79-923f-c3912af9bc14'
+    appName: ${self:service}-${self:provider.stage}
+
+functions:
+  nuxt:
+    handler: sls/functions/handler.nuxt
+    events:
+      - http: ANY {proxy+}
