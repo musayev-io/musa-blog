@@ -1,16 +1,19 @@
 <template>
-  <div>
-    <PrismicHeader />
-    <nuxt />
+  <div class="bg-m-blue-1">
+    <Header />
+    <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
+    <Footer />
   </div>
 </template>
 
 <script>
-import PrismicHeader from '~/components/prismic/PrismicHeader'
+import Header from '~/components/Header.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
-    PrismicHeader,
+    Header,
+    Footer,
   },
   head() {
     return {

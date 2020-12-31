@@ -1,0 +1,18 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+/* fonts */
+@import '~assets/css/fonts';
+
+/* Designs for @apply */
+@layer components {
+  .inline-code {
+    @apply font-code italic text-m-blue-1 bg-m-blue-3 rounded-md px-2 py-1 mx-1;
+  }
+  .inline-link {
+    @apply font-body italic text-m-orange-2 border-b-2 border-m-orange-1;
+  }
+}

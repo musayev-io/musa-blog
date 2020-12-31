@@ -13,6 +13,10 @@ export default {
         rel: 'stylesheet',
         href: 'https://rsms.me/inter/inter.css',
       },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.typekit.net/ctp0lmy.css',
+      },
     ],
   },
 
@@ -20,7 +24,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  // plugins: [{ src: '~/prismic/prismic-links', ssr: false }],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -47,11 +51,14 @@ export default {
 
   prismic: {
     endpoint: 'https://musa-blog.cdn.prismic.io/api/v2',
-    linkResolver: '@/plugins/link-resolver',
-    htmlSerializer: '@/plugins/html-serializer',
-    /* see configuration for more */
+    // htmlSerializer: '@/plugins/prismic/html-serializer',
+    // linkResolver: '@/plugins/prismic/link-resolver',
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+  loading: {
+    color: '#ff9500',
+    height: '5px',
+  },
 }
