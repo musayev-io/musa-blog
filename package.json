@@ -18,7 +18,7 @@
     "core-js": "^3.6.5",
     "luxon": "^1.25.0",
     "nuxt": "^2.14.7",
-    "tailwindcss": "^1.9.6"
+    "tailwindcss": "^2.0.1-compat"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

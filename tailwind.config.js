@@ -5,6 +5,8 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
+const { emerald } = require('tailwindcss/colors')
 
 module.exports = {
   theme: {
@@ -24,32 +26,14 @@ module.exports = {
           'orange-2': '#febd41',
           'orange-3': '#ffdab9',
         },
-        'owl-charcoal': '#000c1d',
-        'owl-pearl': '#001122',
-        'owl-nepal': '#8badc1',
-        'owl-stone': '#102a44',
-        'owl-pictone': '#48BFE3',
-        'owl-turq': '#00f5d4',
-        'owl-org-peach': '#ffdab9',
-        'owl-org-pastel': '#febd41',
-        'owl-org-safety': '#ff9500',
-      },
-    },
-    typography: {
-      default: {
-        css: {
-          color: '#22282b',
-          strong: {
-            fontWeight: '800',
-          },
-          h1: {
-            color: '#08d69f',
-          },
-          h2: {
-            color: '#ff47c0',
-            font: 'mono',
-          },
-        },
+        gray: colors.coolGray,
+        red: colors.red,
+        yellow: colors.amber,
+        green: colors.emerald,
+        blue: colors.blue,
+        indigo: colors.indigo,
+        purple: colors.violet,
+        pink: colors.pink,
       },
     },
   },
@@ -57,5 +41,5 @@ module.exports = {
     backgroundImage: ['responsive', 'hover'],
     backgroundColor: ['hover'],
   },
-  plugins: [require('@tailwindcss/ui'), require('@tailwindcss/typography')],
+  plugins: [],
 }
