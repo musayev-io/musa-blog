@@ -61,4 +61,5 @@ export default {
     color: '#ff9500',
     height: '5px',
   },
+  srcDir: 'nuxt/',
 }
