@@ -4,15 +4,15 @@
     <section v-for="(slice, index) in slices" :key="'slice-' + index">
       <!-- Text slice template -->
       <template v-if="slice.slice_type === 'text'">
-        <text-slice :slice="slice"></text-slice>
+        <text-slice :slice="slice" />
       </template>
       <!-- Quote slice template -->
       <template v-else-if="slice.slice_type === 'quote'">
-        <quote-slice :slice="slice"></quote-slice>
+        <quote-slice :slice="slice" />
       </template>
       <!-- Image slice template -->
       <template v-else-if="slice.slice_type === 'image'">
-        <image-slice :slice="slice"></image-slice>
+        <image-slice :slice="slice" />
       </template>
     </section>
   </section>

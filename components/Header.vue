@@ -1,18 +1,8 @@
 <template>
-  <nav class="grid grid-cols-12 pt-8 bg-m-blue-1">
-    <div class="col-start-4 col-end-10">
-      <div class="flex justify-end space-x-8">
-        <nuxt-link to="/" class="font-heading uppercase text-m-blue-3"
-          >Home</nuxt-link
-        >
-        <nuxt-link to="/" class="font-heading uppercase text-m-blue-3"
-          >About</nuxt-link
-        >
-        <nuxt-link to="/" class="font-heading uppercase text-m-blue-3"
-          >Blog</nuxt-link
-        >
-      </div>
-    </div>
+  <nav class="flex justify-end space-x-8 max-w-4xl py-6 pr-6">
+    <nuxt-link to="/" class="font-display uppercase text-m-blue-3"> Home </nuxt-link>
+    <!-- <nuxt-link to="/" class="font-display uppercase text-m-blue-3"> About </nuxt-link> -->
+    <nuxt-link to="/" class="font-display uppercase text-m-blue-3"> Blog </nuxt-link>
   </nav>
 </template>
 

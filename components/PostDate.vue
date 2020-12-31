@@ -1,16 +1,20 @@
 <template>
-  <div class="flex flex-col justify-start">
-    <div class="">
-      <span class="text-m-blue-2 font-mono text-sm text-center">
-        JAN 2020
-      </span>
-    </div>
-    <span class="text-m-orange-1 t-america text-2xl text-center"> 10 </span>
+  <div>
+    <span class="font-body font-light text-sm text-m-blue-2 pt-4 mb-4">Posted on {{ postDate }}</span>
   </div>
 </template>
 
 <script>
+const { DateTime } = require('luxon')
+
 export default {
   name: 'PostDate',
+  props: ['date'],
+  computed: {
+    postDate() {
+      const dt = DateTime.fromISO(this.date)
+      return dt.toLocaleString(DateTime.DATE_FULL)
+    },
+  },
 }
 </script>

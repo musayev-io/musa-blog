@@ -1,35 +1,29 @@
 <template>
-  <div class="bg-m-blue-1">
+  <div class="bg-m-blue-1 mx-auto sm:px-10 lg:px-20 max-w-5xl">
     <!-- Slices block component -->
     <p v-if="$fetchState.pending">Fetching posts...</p>
     <p v-else-if="$fetchState.error">Error while fetching posts</p>
     <article v-else class="">
-      <div class="grid grid-cols-12 mt-20">
-        <div class="col-start-4 col-end-10">
-          <div class="flex flex-col px-20">
-            <h1
-              class="text-m-orange-3 font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4"
-            >
-              {{ postTitle }}
-            </h1>
-            <span class="font-maison font-light text-sm text-m-blue-2 pt-4 mb-4"
-              >Written by <strong>Musa Musayev</strong> on {{ postDate }}</span
-            >
-            <!-- TODO :: Iterate through tags -->
-            <div class="flex">
-              <post-tag class="mb-10">
-                <slot>{{ postTags }}</slot>
-              </post-tag>
-              <post-tag class="mb-10">
-                <slot>lambda</slot>
-              </post-tag>
-              <post-tag class="mb-10">
-                <slot>lambdas</slot>
-              </post-tag>
-            </div>
-            <render-slices class="" :slices="meta.slices" />
-          </div>
+      <div class="flex flex-col">
+        <h1 class="text-m-orange-3 font-display text-3xl sm:text-4xl lg:text-5xl font-medium mt-16 mb-4">
+          {{ postTitle }}
+        </h1>
+        <span class="font-body font-light text-sm text-m-blue-2 pt-4 mb-4">
+          Written by <strong>Musa Musayev</strong> on {{ postDate }}
+        </span>
+        <!-- TODO :: Iterate through tags -->
+        <div class="flex">
+          <PostTag class="mb-10">
+            <slot>{{ postTags }}</slot>
+          </PostTag>
+          <PostTag class="mb-10">
+            <slot>lambda</slot>
+          </PostTag>
+          <PostTag class="mb-10">
+            <slot>lambdas</slot>
+          </PostTag>
         </div>
+        <RenderSlices class="" :slices="meta.slices" />
       </div>
     </article>
   </div>
@@ -48,17 +42,6 @@ export default {
     PostTag,
   },
   layout: 'default',
-  async fetch() {
-    // Get blog post
-    const postQuery = await this.$prismic.api.getByUID(
-      'posts',
-      this.$route.params.uid
-    )
-    this.meta.data = postQuery.data
-    this.meta.publishedDate = postQuery.first_publication_date
-    this.meta.slices = postQuery.data.body
-    this.meta.tags = postQuery.tags
-  },
   data() {
     return {
       meta: {
@@ -67,6 +50,19 @@ export default {
         slices: '',
         tags: '',
       },
+    }
+  },
+  async fetch() {
+    // Get blog post
+    const postQuery = await this.$prismic.api.getByUID('posts', this.$route.params.uid)
+    this.meta.data = postQuery.data
+    this.meta.publishedDate = postQuery.first_publication_date
+    this.meta.slices = postQuery.data.body
+    this.meta.tags = postQuery.tags
+  },
+  head() {
+    return {
+      title: 'Prismic Nuxt.js Multi Page Website',
     }
   },
   computed: {
@@ -83,13 +79,8 @@ export default {
       return 'sample tag'
     },
   },
-  created() {
-    console.log(this.postDate)
-  },
-  head() {
-    return {
-      title: 'Prismic Nuxt.js Multi Page Website',
-    }
+  mounted() {
+    console.log('Post Query:' + JSON.stringify(this.postQuery))
   },
 }
 </script>

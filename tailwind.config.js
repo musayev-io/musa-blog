@@ -10,13 +10,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        america: ['america', ...defaultTheme.fontFamily.mono],
-        heading: ['america-extended', ...defaultTheme.fontFamily.mono],
-        subheading: ['america-condensed', ...defaultTheme.fontFamily.mono],
-        mono: ['t-star-tw', ...defaultTheme.fontFamily.mono],
-        maison: ['maison-neue-extended', ...defaultTheme.fontFamily.mono],
         body: ['walsheim', ...defaultTheme.fontFamily.mono],
+        code: ['dank-mono', ...defaultTheme.fontFamily.mono],
         display: ['adieu', ...defaultTheme.fontFamily.mono],
+        mono: ['ia-writer-duo', ...defaultTheme.fontFamily.mono],
       },
       colors: {
         m: {
@@ -58,6 +55,7 @@ module.exports = {
   },
   variants: {
     backgroundImage: ['responsive', 'hover'],
+    backgroundColor: ['hover'],
   },
   plugins: [require('@tailwindcss/ui'), require('@tailwindcss/typography')],
 }

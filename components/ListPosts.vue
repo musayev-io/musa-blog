@@ -1,25 +1,22 @@
 <template>
   <section class="flex flex-col">
     <div v-for="post in posts" :key="post.id">
-      <post-title-with-date :post="post" />
+      <SinglePost :post="post" />
     </div>
   </section>
 </template>
 
 <script>
-import PostTitleWithDate from '@/components/PostTitleWithDate.vue'
+import SinglePost from '@/components/SinglePost.vue'
 
 export default {
   name: 'ListPosts',
   components: {
-    PostTitleWithDate,
+    SinglePost,
   },
   props: ['posts'],
   data() {
     return {}
-  },
-  mounted() {
-    console.log(`ListPosts: ${JSON.stringify(this.posts)}`)
   },
 }
 </script>
