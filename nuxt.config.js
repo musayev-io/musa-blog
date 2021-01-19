@@ -31,8 +31,8 @@ export default {
   },
 
   // Deployment type
-  ssr: false,
-  target: 'static',
+  // ssr: false,
+  // target: 'static',
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
