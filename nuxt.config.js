@@ -38,7 +38,7 @@ export default {
   components: true,
 
   // Nuxt application directory
-  srcDir: 'src/',
+  // srcDir: 'src/',
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
