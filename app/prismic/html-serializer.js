@@ -44,12 +44,12 @@ export default function (type, element, content, children) {
       return `<h1>${children.join('')}</h1>`
 
     case Elements.heading2:
-      return `<h2 class="text-m-orange-2 text-xl sm:text-2xl lg:text-3xl font-heading font-bold mt-6 mb-4">${children.join(
+      return `<h2 class="text-m-orange-2 text-xl sm:text-2xl lg:text-3xl font-heading font-bold mt-6 mb-8">${children.join(
         ''
       )}</h2>`
 
     case Elements.heading3:
-      return `<h3 class="text-m-orange-2 text-lg sm:text-xl lg:text-2xl font-heading font-bold mt-6 mb-4">${children.join(
+      return `<h3 class="text-m-orange-2 text-lg sm:text-xl lg:text-2xl font-heading font-light mt-6 mb-4">${children.join(
         ''
       )}</h3>`
 
@@ -66,7 +66,7 @@ export default function (type, element, content, children) {
       if (children[0] === '') {
         return
       }
-      return `<p class="text-white font-body text-xl py-3 leading-8">${children.join('')}</p>`
+      return `<p class="text-white font-body text-lg py-3">${children.join('')}</p>`
 
     case Elements.preformatted:
       return `<pre>${children.join('')}</pre>`
@@ -78,10 +78,10 @@ export default function (type, element, content, children) {
       return `<em>${children.join('')}</em>`
 
     case Elements.listItem:
-      return `<li class="text-white font-body text-xl">${children.join('')}</li>`
+      return `<li class="text-white font-body text-xl mb-4">${children.join('')}</li>`
 
     case Elements.oListItem:
-      return `<li class="text-white font-body text-xl">${children.join('')}</li>`
+      return `<li class="text-white font-body text-xl mb-4">${children.join('')}</li>`
 
     case Elements.list:
       return `<ul class="list-disc list-inside pl-7">${children.join('')}</ul>`

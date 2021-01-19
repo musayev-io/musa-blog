@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-m-blue-1 mx-auto sm:px-10 lg:px-20 max-w-5xl">
+  <div class="bg-m-blue-1 mx-auto px-10 lg:px-20 max-w-5xl">
     <!-- Slices block component -->
     <p v-if="$fetchState.pending">Fetching posts...</p>
     <p v-else-if="$fetchState.error">Error while fetching posts</p>
@@ -8,7 +8,7 @@
         <h1 class="text-m-orange-3 font-display text-3xl sm:text-4xl lg:text-5xl font-medium mt-16 mb-4">
           {{ postTitle }}
         </h1>
-        <span class="font-body font-light text-sm text-m-blue-2 pt-4 mb-4">
+        <span class="font-heading font-light text-sm text-m-blue-2 pt-4 mb-6">
           Written by <strong>Musa Musayev</strong> on {{ postDate }}
         </span>
         <!-- TODO :: Iterate through tags -->
