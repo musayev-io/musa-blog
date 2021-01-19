@@ -10,19 +10,14 @@
     <section class="flex flex-col mt-16 mb-8 max-w-4xl mx-auto">
       <span class="text-m-orange-3 font-body text-2xl">Hello, I'm</span>
       <span class="text-m-orange-2 font-display text-5xl font-bold mb-4">Musa Musayev 🤙🏼 </span>
-      <!-- <span class="text-m-blue-2 font-body text-2xl mb-2">
-        I’m a solution architect and product owner for Deloitte.
-      </span>
-      <span class="text-m-blue-2 font-body text-2xl">
-        I work primarily on AWS technologies, specializing in serverless solutions. Japan This is a collection of my
-        notes and thoughts, and help those who are on a similar jouney as me
-      </span> -->
       <span class="text-m-blue-2 font-heading font-thin text-xl mb-2">
-        I’m a solution architect and product owner for Deloitte.
+        Aliquam nascetur rutrum velit ad dictum non
       </span>
       <span class="text-m-blue-2 font-heading font-thin text-xl">
-        I work primarily on AWS technologies, specializing in serverless solutions. Japan This is a collection of my
-        notes and thoughts, and help those who are on a similar jouney as me
+        Laborum sint aliquip fugiat tempor pariatur in velit laboris aliqua incididunt culpa aliqua labore. Consequat
+        cupidatat incididunt veniam in nostrud ad. Est anim laborum qui voluptate. Ipsum velit in Lorem amet laboris
+        consequat esse dolore. Aliquip culpa adipisicing non dolore esse ex anim. Deserunt duis dolor nisi do nulla
+        mollit exercitation exercitation proident magna officia culpa. Anim minim quis proident elit.
       </span>
     </section>
     <main>

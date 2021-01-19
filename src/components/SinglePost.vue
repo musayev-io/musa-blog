@@ -50,7 +50,7 @@ export default {
       return this.post.first_publication_date
     },
     postSnippet() {
-      return this.post.data
+      return this.post.data.post_snippet[0]
     },
   },
   mounted() {

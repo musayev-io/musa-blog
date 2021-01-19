@@ -14,7 +14,6 @@ module.exports = {
         body: ['walsheim', ...defaultTheme.fontFamily.mono],
         code: ['dank-mono', ...defaultTheme.fontFamily.mono],
         display: ['adieu', ...defaultTheme.fontFamily.mono],
-        mono: ['ia-writer-duo', ...defaultTheme.fontFamily.mono],
       },
       colors: {
         m: {
@@ -41,4 +40,11 @@ module.exports = {
     backgroundColor: ['hover'],
   },
   plugins: [],
+  purge: {
+    content: ['app/prismic/html-serializer.js'],
+    options: {
+      // whitelist: ['list-decimal', 'list-disc', 'list-inside'],
+      // whitelistPatterns: [/^p[x,y]-/, /^p-/],
+    },
+  },
 }

@@ -69,6 +69,10 @@ export default {
     // linkResolver: '@/plugins/prismic/link-resolver',
   },
 
+  tailwindcss: {
+    configPath: '~/tailwind.config.js',
+  },
+
   loading: {
     color: '#ff9500',
     height: '5px',
