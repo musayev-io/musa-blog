@@ -3,7 +3,7 @@
     <!-- tags -->
     <!-- NEED TO ITERATE THROUGH TAGS -->
     <div>
-      <PostTag v-for="tag in postTags" :key="tag.id" class="bg-m-blue-3 text-m-blue-1 font-mono text-xs">
+      <PostTag v-for="tag in postTags" :key="tag.id">
         <slot>{{ tag }}</slot>
       </PostTag>
     </div>

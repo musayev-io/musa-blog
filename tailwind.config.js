@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ['tiempos', ...defaultTheme.fontFamily.serif],
+        // body: ['tiempos', ...defaultTheme.fontFamily.serif],
+        body: ['ambit', ...defaultTheme.fontFamily.serif],
         code: ['dank-mono', ...defaultTheme.fontFamily.mono],
         display: ['adieu', ...defaultTheme.fontFamily.sans],
         heading: ['america-extended', ...defaultTheme.fontFamily.sans],
@@ -39,6 +40,7 @@ module.exports = {
   variants: {
     backgroundImage: ['responsive', 'hover'],
     backgroundColor: ['hover'],
+    borderWidth: ['hover'],
   },
   plugins: [],
   purge: {
