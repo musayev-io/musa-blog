@@ -2,7 +2,7 @@
   <div class="">
     <template v-if="label === 'full-screen'">
       <!-- need to do position: absolute; w & h: 100; background: grey with light opacity -->
-      <div class="" :style="{ 'background-image': 'url(' + img.url + ')' }" />
+      <div class="" :style="{ 'background-image': 'url(' + img.url + ')' }"></div>
     </template>
     <template v-else-if="label === 'post-preview'">
       <div class="">

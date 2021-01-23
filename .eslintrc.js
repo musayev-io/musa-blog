@@ -17,12 +17,15 @@ module.exports = {
   plugins: ['prettier'],
   // add your custom rules here
   rules: {
-    'vue/singleline-html-element-content-newline': [
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/html-self-closing': [
       'error',
       {
-        ignoreWhenNoAttributes: true,
-        ignoreWhenEmpty: true,
-        ignores: ['pre', 'textarea', ...INLINE_ELEMENTS],
+        html: {
+          void: 'always',
+          normal: 'never',
+          component: 'any',
+        },
       },
     ],
   },

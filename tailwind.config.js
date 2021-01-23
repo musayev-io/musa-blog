@@ -5,7 +5,7 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 const defaultTheme = require('tailwindcss/defaultTheme')
-// const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   theme: {
@@ -26,14 +26,14 @@ module.exports = {
           'orange-2': '#febd41',
           'orange-3': '#ffdab9',
         },
-        // gray: colors.coolGray,
-        // red: colors.red,
-        // yellow: colors.amber,
-        // green: colors.emerald,
-        // blue: colors.blue,
-        // indigo: colors.indigo,
-        // purple: colors.violet,
-        // pink: colors.pink,
+        blueGray: colors.blueGray,
+        red: colors.red,
+        yellow: colors.amber,
+        green: colors.emerald,
+        blue: colors.blue,
+        indigo: colors.indigo,
+        purple: colors.violet,
+        pink: colors.pink,
       },
     },
   },

@@ -1,22 +1,24 @@
 <template>
-  <div class="flex flex-col mt-6 mb-6">
-    <!-- tags -->
-    <!-- NEED TO ITERATE THROUGH TAGS -->
-    <div>
-      <PostTag v-for="tag in postTags" :key="tag.id">
-        <slot>{{ tag }}</slot>
-      </PostTag>
+  <div class="px-6 pt-5 pb-1 mb-8 rounded-lg shadow-lg overflow-hidden bg-blueGray-800">
+    <div class="flex flex-col mb-6">
+      <!-- date -->
+      <!-- <PostDate class="font-body font-light italic text-m-blue-2 mb-2" :date="postDate" /> -->
+      <!-- post title -->
+      <span class="text-m-orange-3 font-display text-2xl mb-1">
+        <nuxt-link :to="`post/${post.uid}`">{{ postTitle }}</nuxt-link>
+      </span>
+      <!-- tags -->
+      <!-- NEED TO ITERATE THROUGH TAGS -->
+      <div class="flex-wrap">
+        <PostTag v-for="tag in postTags" :key="tag.id" class="my-4" size="sm">
+          <slot>{{ tag }}</slot>
+        </PostTag>
+      </div>
+      <!-- post snippet -->
+      <span class="text-m-blue-2 font-thin font-body pt-1">
+        {{ postSnippet }}
+      </span>
     </div>
-    <!-- post title -->
-    <span class="text-m-orange-3 font-display text-2xl pt-4">
-      <nuxt-link :to="`post/${post.uid}`">{{ postTitle }}</nuxt-link>
-    </span>
-    <!-- date -->
-    <PostDate class="py-2 font-body font-light italic text-m-blue-2" :date="postDate" />
-    <!-- post snippet -->
-    <span class="text-m-blue-2 text-xl font-body pt-1">
-      {{ postSnippet }}
-    </span>
   </div>
 </template>
 
