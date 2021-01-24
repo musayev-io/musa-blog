@@ -44,12 +44,12 @@ export default function (type, element, content, children) {
       return `<h1>${children.join('')}</h1>`
 
     case Elements.heading2:
-      return `<h2 class="text-m-orange-2 text-xl sm:text-2xl lg:text-3xl font-heading font-bold mt-6 mb-4">${children.join(
+      return `<h2 class="text-m-orange-2 text-xl sm:text-2xl lg:text-3xl font-heading font-bold mt-6 mb-8">${children.join(
         ''
       )}</h2>`
 
     case Elements.heading3:
-      return `<h3 class="text-m-orange-2 text-lg sm:text-xl lg:text-2xl font-heading font-bold mt-6 mb-4">${children.join(
+      return `<h3 class="text-m-orange-2 text-lg sm:text-xl lg:text-2xl font-heading font-light mt-6 mb-4">${children.join(
         ''
       )}</h3>`
 
