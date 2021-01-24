@@ -9,14 +9,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://rsms.me/inter/inter.css',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://use.typekit.net/ctp0lmy.css',
-      },
+      // {
+      //   rel: 'stylesheet',
+      //   href: 'https://rsms.me/inter/inter.css',
+      // },
     ],
   },
 
@@ -69,9 +65,9 @@ export default {
     // linkResolver: '@/plugins/prismic/link-resolver',
   },
 
-  tailwindcss: {
-    configPath: '~/tailwind.config.js',
-  },
+  // tailwindcss: {
+  //   configPath: '~/tailwind.config.js',
+  // },
 
   loading: {
     color: '#ff9500',

@@ -1,5 +1,8 @@
 <template>
-  <span class="inline-flex items-center rounded-md bg-emerald-300 text-m-blue-1 font-mono" :class="dynamicStyle">
+  <span
+    class="inline-flex items-center rounded-md bg-emerald-300 text-m-blue-1 font-mono text-xs md:text-base px-2 py-1 mr-3 md:px-2 md:py-1 md:mr-3"
+    :class="dynamicStyle"
+  >
     <slot></slot>
   </span>
 </template>

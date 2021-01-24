@@ -24,7 +24,7 @@
         <div class="-mr-2 flex sm:hidden">
           <!-- Mobile menu button -->
           <button
-            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-offset-blueGray-700"
+            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 focus:outline-none"
             aria-expanded="false"
             @click="toggleMenu"
           >
@@ -36,7 +36,8 @@
             Menu open: "hidden", Menu closed: "block"
           -->
             <svg
-              class="block h-6 w-6"
+              class="h-6 w-6"
+              :class="isMenuOpen ? 'hidden' : 'block'"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -52,7 +53,8 @@
             Menu open: "block", Menu closed: "hidden"
           -->
             <svg
-              class="hidden h-6 w-6"
+              class="h-6 w-6"
+              :class="isMenuOpen ? 'block' : 'hidden'"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -72,7 +74,7 @@
     Menu open: "block", Menu closed: "hidden"
   -->
     <div class="sm:hidden" :class="isMenuOpen ? 'block' : 'hidden'">
-      <div class="px-2 pt-2 pb-3 space-y-1">
+      <div class="px-6 pt-2 space-y-1" @click="toggleMenu">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <nuxt-link to="/" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">
           Home
