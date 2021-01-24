@@ -17,6 +17,9 @@
             <slot>{{ tag }}</slot>
           </PostTag>
         </div>
+        <p>
+          {{ postSnippet }}
+        </p>
         <RenderSlices class="" :slices="postData.slices" />
       </div>
     </article>
@@ -65,6 +68,13 @@ export default {
       // may need to include link so it's clickable to the tag page
       try {
         return this.postData.tags
+      } catch {
+        return ''
+      }
+    },
+    postSnippet() {
+      try {
+        return this.post.data.snippet[0].text
       } catch {
         return ''
       }

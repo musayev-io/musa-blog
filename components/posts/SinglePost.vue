@@ -1,5 +1,5 @@
 <template>
-  <div class="px-6 pt-5 pb-1 mb-8 rounded-lg shadow-lg overflow-hidden bg-blueGray-800">
+  <div class="px-6 pt-5 pb-1 mb-8 rounded-lg shadow-lg overflow-hidden bg-blueGray-900">
     <div class="flex flex-col mb-6">
       <!-- date -->
       <!-- <PostDate class="font-body font-light italic text-m-blue-2 mb-2" :date="postDate" /> -->
