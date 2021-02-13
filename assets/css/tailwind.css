@@ -10,9 +10,15 @@
 /* Designs for @apply */
 @layer components {
   .inline-code {
-    @apply font-code italic text-m-blue-1 bg-m-blue-3 rounded-md px-2 py-1 mx-1;
+    @apply font-code text-m-blue-1 bg-blueGray-200 rounded-md px-2 py-1 mx-1;
   }
   .inline-link {
     @apply font-body italic text-m-orange-2 border-b-2 border-m-orange-1;
+  }
+  .padding-horizontal {
+    @apply container mx-auto max-w-4xl px-6 sm:px-8 lg:px-10;
+  }
+  .z-text-body {
+    @apply font-body font-light text-xl md:text-2xl leading-relaxed;
   }
 }

@@ -11,13 +11,8 @@
 </template>
 
 <script>
-import PostDate from '~/components/PostDate.vue'
-
 export default {
   name: 'PostTitleWithSnippet',
-  components: {
-    PostDate,
-  },
   props: {
     post: {
       type: Object,

@@ -1,7 +1,5 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
-  ssr: false,
-  target: 'static', // default is 'server'
   head: {
     title: 'blog-musa',
     meta: [
@@ -11,25 +9,35 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://rsms.me/inter/inter.css',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://use.typekit.net/ctp0lmy.css',
-      },
+      // {
+      //   rel: 'stylesheet',
+      //   href: 'https://rsms.me/inter/inter.css',
+      // },
     ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
 
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  // plugins: [{ src: '~/prismic/prismic-links', ssr: false }],
+  // Server settings
+  server: {
+    port: 1337,
+    host: '0.0.0.0',
+    timing: false,
+  },
+
+  // Deployment type
+  // ssr: false,
+  // target: 'static',
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
+
+  // Nuxt application directory
+  // srcDir: 'src/',
+
+  // Build Configuration (https://go.nuxtjs.dev/config-build)
+  build: {},
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
@@ -57,8 +65,10 @@ export default {
     // linkResolver: '@/plugins/prismic/link-resolver',
   },
 
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  // tailwindcss: {
+  //   configPath: '~/tailwind.config.js',
+  // },
+
   loading: {
     color: '#ff9500',
     height: '5px',

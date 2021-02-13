@@ -6,16 +6,16 @@
  */
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
-const { emerald } = require('tailwindcss/colors')
 
 module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ['walsheim', ...defaultTheme.fontFamily.mono],
+        // body: ['aeonik', ...defaultTheme.fontFamily.serif],
+        body: ['walsheim', ...defaultTheme.fontFamily.serif],
         code: ['dank-mono', ...defaultTheme.fontFamily.mono],
-        display: ['adieu', ...defaultTheme.fontFamily.mono],
-        mono: ['ia-writer-duo', ...defaultTheme.fontFamily.mono],
+        display: ['adieu', ...defaultTheme.fontFamily.sans],
+        heading: ['america-extended', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         m: {
@@ -26,13 +26,13 @@ module.exports = {
           'orange-2': '#febd41',
           'orange-3': '#ffdab9',
         },
-        gray: colors.coolGray,
+        blueGray: colors.blueGray,
         red: colors.red,
-        yellow: colors.amber,
-        green: colors.emerald,
+        amber: colors.amber,
+        emerald: colors.emerald,
         blue: colors.blue,
         indigo: colors.indigo,
-        purple: colors.violet,
+        viloet: colors.violet,
         pink: colors.pink,
       },
     },
@@ -40,6 +40,14 @@ module.exports = {
   variants: {
     backgroundImage: ['responsive', 'hover'],
     backgroundColor: ['hover'],
+    borderWidth: ['hover'],
   },
   plugins: [],
+  purge: {
+    content: ['app/prismic/html-serializer.js'],
+    // options: {
+    //   // whitelist: ['list-decimal', 'list-disc', 'list-inside'],
+    //   // whitelistPatterns: [/^p[x,y]-/, /^p-/],
+    // },
+  },
 }

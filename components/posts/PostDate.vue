@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="font-body font-light text-sm text-m-blue-2 pt-4 mb-4">Posted on {{ postDate }}</span>
+    <span class="pt-4 mb-4">Posted on {{ postDate }} </span>
   </div>
 </template>
 

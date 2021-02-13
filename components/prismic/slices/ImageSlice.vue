@@ -2,7 +2,7 @@
   <div class="">
     <template v-if="label === 'full-screen'">
       <!-- need to do position: absolute; w & h: 100; background: grey with light opacity -->
-      <div class="" :style="{ 'background-image': 'url(' + img.url + ')' }" />
+      <div class="" :style="{ 'background-image': 'url(' + img.url + ')' }"></div>
     </template>
     <template v-else-if="label === 'post-preview'">
       <div class="">
@@ -33,7 +33,7 @@ export default {
     }
   },
   created() {
-    console.log(JSON.stringify(this.slice))
+    // console.log(JSON.stringify(this.slice))
     this.img = this.slice.primary.image
     this.label = this.slice.slice_label
   },
