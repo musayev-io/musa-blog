@@ -11,8 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // body: ['tiempos', ...defaultTheme.fontFamily.serif],
-        body: ['ambit', ...defaultTheme.fontFamily.serif],
+        // body: ['aeonik', ...defaultTheme.fontFamily.serif],
+        body: ['walsheim', ...defaultTheme.fontFamily.serif],
         code: ['dank-mono', ...defaultTheme.fontFamily.mono],
         display: ['adieu', ...defaultTheme.fontFamily.sans],
         heading: ['america-extended', ...defaultTheme.fontFamily.sans],

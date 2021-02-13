@@ -14,17 +14,20 @@
       <span class="text-m-blue-2 font-body font-light text-xl">
         Laborum sint aliquip fugiat tempor pariatur in velit laboris aliqua incididunt culpa aliqua labore. Consequat
         cupidatat incididunt veniam in nostrud ad. Est anim laborum qui voluptate. Ipsum velit in Lorem amet laboris
-        consequat esse dolore. Aliquip culpa adipisicing non dolore esse ex anim. Deserunt duis dolor nisi do nulla
-        mollit exercitation exercitation proident magna officia culpa. Anim minim quis proident elit.
+        consequat esse dolore. Aliquip culpa
+        <span class="font-body text-m-orange-2 border-b-2 border-m-orange-1">adipisicing non dolore</span>
+        esse ex anim. Deserunt duis dolor nisi do nulla mollit exercitation exercitation proident magna officia culpa.
+        Anim minim quis proident elit.
       </span>
     </section>
     <main class="">
       <div class="font-heading font-bold text-3xl text-white mb-8">Recent Posts</div>
-      <section class="flex flex-col">
-        <div v-for="post in posts" :key="post.id">
-          <SinglePost :post="post" />
-        </div>
-      </section>
+      <article v-for="post in posts" :key="post.id" class="flex flex-col">
+        <SinglePost
+          class="md:group-hover:opacity-50 md:hover:scale-11/10x md:hover:opacity-important transition"
+          :post="post"
+        />
+      </article>
     </main>
   </div>
 </template>
@@ -46,7 +49,9 @@ export default {
     // this.hero = this.home.hero_group[0]
 
     // Get blog posts
-    const prismicPostQuery = await this.$prismic.api.query(this.$prismic.predicates.at('document.type', 'posts'))
+    const prismicPostQuery = await this.$prismic.api.query(this.$prismic.predicates.at('document.type', 'posts'), {
+      orderings: '[document.last_publication_date desc]',
+    })
     this.posts = prismicPostQuery.results
   },
   mounted() {
