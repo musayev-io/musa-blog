@@ -1,21 +1,25 @@
 <template>
-  <div class="bg-m-blue-1 container mx-auto max-w-4xl px-6 sm:px-8 lg:px-16">
+  <div class="bg-m-blue-1 container mx-auto max-w-4xl">
     <!-- Slices block component -->
     <p v-if="$fetchState.pending">Fetching posts...</p>
     <p v-else-if="$fetchState.error">Error while fetching posts</p>
     <article v-else class="">
       <div class="flex flex-col">
-        <h1 class="text-m-orange-3 font-display text-3xl sm:text-4xl lg:text-5xl font-medium mt-12 mb-2">
+        <h1
+          class="text-m-orange-3 font-display text-3xl sm:text-4xl lg:text-5xl font-medium mt-12 mb-2 px-6 sm:px-8 lg:px-16"
+        >
           {{ postTitle }}
         </h1>
-        <span class="font-body font-light text-sm text-m-blue-2 pt-4"> Written on {{ postDate }} </span>
+        <span class="font-body font-light text-sm text-m-blue-2 pt-4 px-6 sm:px-8 lg:px-16">
+          Written on {{ postDate }}
+        </span>
         <!-- TODO :: Iterate through tags -->
-        <div class="flex-wrap">
+        <div class="flex-wrap px-6 sm:px-8 lg:px-16">
           <PostTag v-for="tag in postTags" :key="tag.id" class="my-4" size="md">
             <slot>{{ tag }}</slot>
           </PostTag>
         </div>
-        <p>
+        <p class="px-6 sm:px-8 lg:px-16">
           {{ postSnippet }}
         </p>
         <RenderSlices class="" :slices="postData.slices" />

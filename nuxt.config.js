@@ -9,10 +9,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // {
-      //   rel: 'stylesheet',
-      //   href: 'https://rsms.me/inter/inter.css',
-      // },
+      {
+        rel: 'stylesheet',
+        href: '~assets/css/night-owl.css',
+      },
     ],
   },
 
@@ -54,6 +54,12 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    [
+      'nuxt-highlightjs',
+      {
+        style: 'night-owl',
+      },
+    ],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
