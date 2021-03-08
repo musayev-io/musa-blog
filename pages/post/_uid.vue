@@ -6,12 +6,12 @@
     <article v-else class="">
       <div class="flex flex-col">
         <h1
-          class="text-m-orange-3 font-display text-3xl sm:text-4xl lg:text-5xl font-medium mt-12 mb-2 px-6 sm:px-8 lg:px-16"
+          class="text-m-orange-3 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mt-12 mb-4 px-6 sm:px-8 lg:px-16"
         >
           {{ postTitle }}
         </h1>
         <span class="font-body font-light text-sm text-m-blue-2 pt-4 px-6 sm:px-8 lg:px-16">
-          Written on {{ postDate }}
+          Written by Musa Musayev on {{ postDate }}
         </span>
         <!-- TODO :: Iterate through tags -->
         <div class="flex-wrap px-6 sm:px-8 lg:px-16">

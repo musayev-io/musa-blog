@@ -14,14 +14,15 @@ module.exports = {
         // body: ['aeonik', ...defaultTheme.fontFamily.serif],
         body: ['walsheim', ...defaultTheme.fontFamily.serif],
         code: ['dank-mono', ...defaultTheme.fontFamily.mono],
-        display: ['adieu', ...defaultTheme.fontFamily.sans],
+        display: ['america-extended', ...defaultTheme.fontFamily.sans],
         heading: ['america-extended', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         m: {
           'blue-1': '#000c1d',
-          'blue-2': '#8badc1',
-          'blue-3': '#bafaf8',
+          'blue-2': '#0f172a',
+          'blue-3': '#8badc1',
+          'blue-4': '#bafaf8',
           'orange-1': '#ff9500',
           'orange-2': '#febd41',
           'orange-3': '#ffdab9',

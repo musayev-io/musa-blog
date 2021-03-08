@@ -21,7 +21,7 @@ export default {
 
   // Server settings
   server: {
-    port: 1337,
+    port: 3000,
     host: '0.0.0.0',
     timing: false,
   },
@@ -54,12 +54,6 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    [
-      'nuxt-highlightjs',
-      {
-        style: 'night-owl',
-      },
-    ],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

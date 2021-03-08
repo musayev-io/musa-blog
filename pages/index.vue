@@ -10,8 +10,8 @@
     <section class="flex flex-col mb-20">
       <span class="text-m-orange-3 font-heading text-2xl mb-4"> Hello, I'm </span>
       <span class="text-m-orange-2 font-display text-5xl font-bold mb-6"> Musa Musayev 🤙🏼 </span>
-      <span class="text-m-blue-2 font-body font-light text-xl mb-2"> Aliquam nascetur rutrum velit ad dictum non </span>
-      <span class="text-m-blue-2 font-body font-light text-xl">
+      <span class="text-m-blue-3 font-body font-light text-xl mb-2"> Aliquam nascetur rutrum velit ad dictum non </span>
+      <span class="text-m-blue-3 font-body font-light text-xl">
         Laborum sint aliquip fugiat tempor pariatur in velit laboris aliqua incididunt culpa aliqua labore. Consequat
         cupidatat incididunt veniam in nostrud ad. Est anim laborum qui voluptate. Ipsum velit in Lorem amet laboris
         consequat esse dolore. Aliquip culpa
@@ -21,7 +21,7 @@
       </span>
     </section>
     <main class="">
-      <div class="font-heading font-bold text-3xl text-white mb-8">Recent Posts</div>
+      <div class="font-heading font-bold text-2xl text-white mb-8">Recent Posts</div>
       <article v-for="post in posts" :key="post.id" class="flex flex-col">
         <SinglePost
           class="md:group-hover:opacity-50 md:hover:scale-11/10x md:hover:opacity-important transition"
