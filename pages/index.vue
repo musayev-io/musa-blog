@@ -7,17 +7,13 @@
     <!-- <p v-if="$fetching">Pending...</p>
     <p v-else-if="$fetching">error...</p>
     <section v-else> -->
-    <section class="flex flex-col mb-20">
+    <section class="flex flex-col mb-12">
       <span class="text-m-orange-3 font-heading text-2xl mb-4"> Hello, I'm </span>
       <span class="text-m-orange-2 font-display text-5xl font-bold mb-6"> Musa Musayev 🤙🏼 </span>
-      <span class="text-m-blue-3 font-body font-light text-xl mb-2"> Aliquam nascetur rutrum velit ad dictum non </span>
-      <span class="text-m-blue-3 font-body font-light text-xl">
-        Laborum sint aliquip fugiat tempor pariatur in velit laboris aliqua incididunt culpa aliqua labore. Consequat
-        cupidatat incididunt veniam in nostrud ad. Est anim laborum qui voluptate. Ipsum velit in Lorem amet laboris
-        consequat esse dolore. Aliquip culpa
-        <span class="font-body text-m-orange-2 border-b-2 border-m-orange-1">adipisicing non dolore</span>
-        esse ex anim. Deserunt duis dolor nisi do nulla mollit exercitation exercitation proident magna officia culpa.
-        Anim minim quis proident elit.
+      <span class="text-m-blue-3 font-body font-light text-xl mb-2">
+        I'm a developer and product owner specializing in serverless technologies built on AWS. Being self-taught, one
+        of the most useful resources I found was blogs from professionals whom I looked up to. My goal is to share my
+        thoughts and findings with others who are on a similar journey as me.
       </span>
     </section>
     <main class="">
