@@ -44,7 +44,7 @@ export default function (type, element, content, children) {
       return `<h1>${children.join('')}</h1>`
 
     case Elements.heading2:
-      return `<h2 class="text-m-orange-2 text-xl sm:text-2xl lg:text-3xl font-heading font-bold mt-6 mb-">${children.join(
+      return `<h2 class="text-m-orange-2 text-xl sm:text-2xl lg:text-3xl font-heading font-bold mt-6 mb-2">${children.join(
         ''
       )}</h2>`
 
@@ -54,7 +54,7 @@ export default function (type, element, content, children) {
       )}</h3>`
 
     case Elements.heading4:
-      return `<h4>${children.join('')}</h4>`
+      return `<h4 class="text-m-orange-2 italic lg:text-lg font-heading mt-6 mb-2">${children.join('')}</h4>`
 
     case Elements.heading5:
       return `<h5>${children.join('')}</h5>`

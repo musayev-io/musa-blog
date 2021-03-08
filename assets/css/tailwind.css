@@ -16,7 +16,7 @@
     @apply font-body text-m-orange-1 hover:border-b-2 hover:border-m-orange-1;
   }
   .inline-emphasis {
-    @apply font-body font-light italic text-m-blue-3;
+    @apply font-body font-light italic text-m-blue-4;
   }
   .padding-horizontal {
     @apply container mx-auto max-w-4xl px-6 sm:px-8 lg:px-10;

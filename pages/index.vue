@@ -43,6 +43,19 @@ export default {
       posts: {},
     }
   },
+  head() {
+    return {
+      title: 'Musa Musayev',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Musa Musayev | Passionate about creating serverless solutions in AWS | This is my abode where I share my thoughts and findings to help the others on a similar journey',
+        },
+      ],
+    }
+  },
   async fetch() {
     // Get home page
     // this.home = (await this.$prismic.api.getSingle('home_page')).data

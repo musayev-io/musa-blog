@@ -6,11 +6,11 @@
     <article v-else class="">
       <div class="flex flex-col">
         <h1
-          class="text-m-orange-3 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl mt-12 mb-4 px-6 sm:px-8 lg:px-16"
+          class="text-m-orange-3 font-heading font-bold text-2xl sm:text-3xl lg:text-4xl mt-12 mb-4 px-6 sm:px-8 lg:px-16"
         >
           {{ postTitle }}
         </h1>
-        <span class="font-body font-light text-sm text-m-blue-2 pt-4 px-6 sm:px-8 lg:px-16">
+        <span class="font-body font-light text-sm text-m-blue-3 pt-4 px-6 sm:px-8 lg:px-16">
           Written by Musa Musayev on {{ postDate }}
         </span>
         <!-- TODO :: Iterate through tags -->
@@ -54,7 +54,14 @@ export default {
   },
   head() {
     return {
-      title: 'Prismic Nuxt.js Multi Page Website',
+      title: this.postTitle,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.postSnippet,
+        },
+      ],
     }
   },
   computed: {
