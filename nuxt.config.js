@@ -26,9 +26,11 @@ export default {
     timing: false,
   },
 
-  // Deployment type
-  // ssr: false,
-  // target: 'static',
+  // Page loading settings
+  loading: {
+    color: '#ff9500',
+    height: '5px',
+  },
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -54,6 +56,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/google-gtag',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -64,16 +67,13 @@ export default {
     // htmlSerializer: '@/plugins/prismic/html-serializer',
     // linkResolver: '@/plugins/prismic/link-resolver',
   },
-
-  // tailwindcss: {
-  //   configPath: '~/tailwind.config.js',
-  // },
-
-  loading: {
-    color: '#ff9500',
-    height: '5px',
-  },
-  purgeCSS: {
-    enabled: false,
+  'google-gtag': {
+    id: 'UA-132464444-1',
+    config: {
+      anonymize_ip: true, // anonymize IP
+      send_page_view: false, // might be necessary to avoid duplicated page track on page reload
+    },
+    debug: true, // enable to track in dev mode
+    disableAutoPageTrack: false, // disable if you don't want to track each page route with router.afterEach(...).
   },
 }
