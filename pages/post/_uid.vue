@@ -1,13 +1,11 @@
 <template>
-  <div class="bg-m-blue-1 container mx-auto max-w-4xl">
+  <div class="bg-m-blue-1 container mx-auto max-w-4xl mt-6">
     <!-- Slices block component -->
     <p v-if="$fetchState.pending">Fetching posts...</p>
     <p v-else-if="$fetchState.error">Error while fetching posts</p>
     <article v-else class="">
       <div class="flex flex-col">
-        <h1
-          class="text-m-orange-3 font-heading font-bold text-2xl sm:text-3xl lg:text-4xl mt-12 mb-4 px-6 sm:px-8 lg:px-16"
-        >
+        <h1 class="text-m-orange-3 font-heading font-bold text-2xl sm:text-3xl lg:text-4xl mb-4 px-6 sm:px-8 lg:px-16">
           {{ postTitle }}
         </h1>
         <span class="font-body font-light text-sm text-m-blue-3 pt-4 px-6 sm:px-8 lg:px-16">

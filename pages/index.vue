@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-m-blue-1 padding-horizontal mt-16 mb-8">
+  <div class="bg-m-blue-1 padding-horizontal mt-6">
     <!-- <p v-if="$fetchState.pending">Pending...</p>
     <p v-else-if="$fetchState.error">error...</p>
     <p v-else>{{ homepage }}</p> -->
