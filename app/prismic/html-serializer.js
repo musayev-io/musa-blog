@@ -66,7 +66,7 @@ export default function (type, element, content, children) {
       if (children[0] === '') {
         return
       }
-      return `<p class="z-text-body text-white py-3">${children.join('')}</p>`
+      return `<p class="z-text-body text-white pb-6">${children.join('')}</p>`
 
     case Elements.preformatted:
       return `<pre>${children.join('')}</pre>`
@@ -84,10 +84,10 @@ export default function (type, element, content, children) {
       return `<li class="text-white z-text-body mb-2">${children.join('')}</li>`
 
     case Elements.list:
-      return `<ul class="list-disc list-outside pl-12 py-2">${children.join('')}</ul>`
+      return `<ul class="list-disc list-outside pl-12 pt-1 py-4">${children.join('')}</ul>`
 
     case Elements.oList:
-      return `<ol class="list-decimal list-outside pl-12 py-2">${children.join('')}</ol>`
+      return `<ol class="list-decimal list-outside pl-12 pt-1 py-4">${children.join('')}</ol>`
 
     case Elements.embed:
       return `
