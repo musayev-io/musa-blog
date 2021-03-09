@@ -11,7 +11,7 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <nav class="bg-m-blue-1">
     <div class="padding-horizontal pt-4">
-      <div class="flex items-center justify-end h-8">
+      <div class="flex items-center justify-end py-4 h-8">
         <div class="flex items-center">
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">

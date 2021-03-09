@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-m-blue-1 padding-horizontal mt-16 mb-8">
+  <div class="bg-m-blue-1 padding-horizontal mt-6">
     <!-- <p v-if="$fetchState.pending">Pending...</p>
     <p v-else-if="$fetchState.error">error...</p>
     <p v-else>{{ homepage }}</p> -->
@@ -7,21 +7,17 @@
     <!-- <p v-if="$fetching">Pending...</p>
     <p v-else-if="$fetching">error...</p>
     <section v-else> -->
-    <section class="flex flex-col mb-20">
+    <section class="flex flex-col mb-12">
       <span class="text-m-orange-3 font-heading text-2xl mb-4"> Hello, I'm </span>
       <span class="text-m-orange-2 font-display text-5xl font-bold mb-6"> Musa Musayev 🤙🏼 </span>
-      <span class="text-m-blue-2 font-body font-light text-xl mb-2"> Aliquam nascetur rutrum velit ad dictum non </span>
-      <span class="text-m-blue-2 font-body font-light text-xl">
-        Laborum sint aliquip fugiat tempor pariatur in velit laboris aliqua incididunt culpa aliqua labore. Consequat
-        cupidatat incididunt veniam in nostrud ad. Est anim laborum qui voluptate. Ipsum velit in Lorem amet laboris
-        consequat esse dolore. Aliquip culpa
-        <span class="font-body text-m-orange-2 border-b-2 border-m-orange-1">adipisicing non dolore</span>
-        esse ex anim. Deserunt duis dolor nisi do nulla mollit exercitation exercitation proident magna officia culpa.
-        Anim minim quis proident elit.
+      <span class="text-m-blue-3 font-body font-light text-xl mb-2">
+        I'm a developer and product owner specializing in serverless technologies built on AWS. Being self-taught, one
+        of the most useful resources I found was blogs from professionals whom I looked up to. My goal is to share m
+        thoughts and findings with others on a similar journey.
       </span>
     </section>
     <main class="">
-      <div class="font-heading font-bold text-3xl text-white mb-8">Recent Posts</div>
+      <div class="font-heading font-bold text-2xl text-white mb-8">Recent Posts</div>
       <article v-for="post in posts" :key="post.id" class="flex flex-col">
         <SinglePost
           class="md:group-hover:opacity-50 md:hover:scale-11/10x md:hover:opacity-important transition"
@@ -54,8 +50,18 @@ export default {
     })
     this.posts = prismicPostQuery.results
   },
-  mounted() {
-    // console.log(`Posts: ${JSON.stringify(this.posts)}`)
+  head() {
+    return {
+      title: 'Musa Musayev',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Musa Musayev | Passionate about creating serverless solutions in AWS | This is my abode where I share my thoughts and findings to help the others on a similar journey',
+        },
+      ],
+    }
   },
 }
 </script>

@@ -1,17 +1,37 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'blog-musa',
+    title: 'Musa Musayev',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content:
+          'https://images.prismic.io/musa-blog/1da27244-9da1-4888-a15d-0c0df644cdfa_jr-korpa-CUNw8KZkqaU-unsplash.jpg?auto=compress,format',
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: "Musa Musayev's AWS blog focusing on serverless technologies",
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: "Musa Musayev's AWS blog focusing on serverless technologies",
+      },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href:
+          'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>',
+      },
       // {
       //   rel: 'stylesheet',
-      //   href: 'https://rsms.me/inter/inter.css',
+      //   href: '~assets/css/night-owl.css',
       // },
     ],
   },
@@ -21,14 +41,16 @@ export default {
 
   // Server settings
   server: {
-    port: 1337,
+    port: 3000,
     host: '0.0.0.0',
     timing: false,
   },
 
-  // Deployment type
-  // ssr: false,
-  // target: 'static',
+  // Page loading settings
+  loading: {
+    color: '#ff9500',
+    height: '5px',
+  },
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -54,6 +76,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/google-gtag',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -64,13 +87,13 @@ export default {
     // htmlSerializer: '@/plugins/prismic/html-serializer',
     // linkResolver: '@/plugins/prismic/link-resolver',
   },
-
-  // tailwindcss: {
-  //   configPath: '~/tailwind.config.js',
-  // },
-
-  loading: {
-    color: '#ff9500',
-    height: '5px',
+  'google-gtag': {
+    id: 'UA-132464444-1',
+    config: {
+      anonymize_ip: true, // anonymize IP
+      send_page_view: false, // might be necessary to avoid duplicated page track on page reload
+    },
+    debug: true, // enable to track in dev mode
+    disableAutoPageTrack: false, // disable if you don't want to track each page route with router.afterEach(...).
   },
 }

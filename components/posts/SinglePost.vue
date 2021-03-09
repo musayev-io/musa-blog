@@ -15,7 +15,8 @@
         </PostTag>
       </div>
       <!-- post snippet -->
-      <span class="text-m-blue-2 font-light font-body pt-1">
+      <!-- <prismic-rich-text class="text-m-blue-3 font-body font-light pt-1" :field="postSnippet" /> -->
+      <span class="text-m-blue-3 font-body font-light pt-1">
         {{ postSnippet }}
       </span>
     </div>

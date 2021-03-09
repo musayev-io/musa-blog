@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <prismic-rich-text :field="slice.primary.text" />
+    <prismic-rich-text class="px-6 sm:px-8 lg:px-16" :field="slice.primary.text" />
   </div>
 </template>
 
