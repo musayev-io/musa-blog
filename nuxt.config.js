@@ -5,7 +5,22 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content:
+          'https://images.prismic.io/musa-blog/1da27244-9da1-4888-a15d-0c0df644cdfa_jr-korpa-CUNw8KZkqaU-unsplash.jpg?auto=compress,format',
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: "Musa Musayev's AWS blog focusing on serverless technologies",
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: "Musa Musayev's AWS blog focusing on serverless technologies",
+      },
     ],
     link: [
       {

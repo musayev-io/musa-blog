@@ -40,6 +40,7 @@ export default {
         slices: '',
         tags: '',
         ogImage: '',
+        ogImageAlt: '',
       },
     }
   },
@@ -62,6 +63,7 @@ export default {
       this.postData.slices.forEach((element) => {
         if (element.slice_type === 'image' && element.slice_label === 'og_image') {
           this.postData.ogImage = element.primary.image.url
+          this.postData.ogImageAlt = element.primary.image.alt
         }
       })
     } catch {
@@ -79,6 +81,8 @@ export default {
           content: this.postSnippet,
         },
         { hid: 'og:image', property: 'og:image', content: this.postData.ogImage },
+        { hid: 'og:image:alt', property: 'og:image:alt', content: this.postData.ogImageAlt },
+        { hid: 'og:description', property: 'og:description', content: this.postSnippet },
       ],
     }
   },
