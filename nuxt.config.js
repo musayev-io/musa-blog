@@ -73,4 +73,7 @@ export default {
     color: '#ff9500',
     height: '5px',
   },
+  purgeCSS: {
+    enabled: false,
+  },
 }

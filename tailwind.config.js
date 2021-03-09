@@ -45,10 +45,20 @@ module.exports = {
   },
   plugins: [],
   purge: {
-    content: ['app/prismic/html-serializer.js', 'components/**/*.vue', 'layouts/**/*.vue', 'pages/**/*.vue'],
-    // options: {
-    //   // whitelist: ['list-decimal', 'list-disc', 'list-inside'],
-    //   // whitelistPatterns: [/^p[x,y]-/, /^p-/],
-    // },
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      'app/prismic/html-serializer.js',
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+      'nuxt.config.js',
+      // TypeScript
+      'plugins/**/*.ts',
+      'nuxt.config.ts',
+    ],
+    options: {
+      safelist: ['inline-code', 'inline-link', 'inline-emphasis'],
+    },
   },
 }
