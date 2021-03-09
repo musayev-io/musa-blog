@@ -43,16 +43,10 @@ export default {
     }
   },
   created() {
-    // console.log(JSON.stringify(this.slice))
     this.label = this.slice.slice_label
     this.imgUrl = this.slice.primary.image.url
     this.imgAlt = this.slice.primary.image.alt
-
-    // Get image caption, if exists
-
-    if (this.slice.primary.caption[0].length > 1) {
-      this.imgCaption = this.slice.primary.caption[0].text
-    }
+    this.imgCaption = this.slice.primary.caption[0].text
   },
 }
 </script>
