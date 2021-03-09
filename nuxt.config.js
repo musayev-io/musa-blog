@@ -7,13 +7,13 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: '~assets/css/night-owl.css',
-      },
-    ],
+    // link: [
+    //   { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    //   {
+    //     rel: 'stylesheet',
+    //     href: '~assets/css/night-owl.css',
+    //   },
+    // ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

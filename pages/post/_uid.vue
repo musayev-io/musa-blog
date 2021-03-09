@@ -41,6 +41,7 @@ export default {
         publishedDate: '',
         slices: '',
         tags: '',
+        ogImage: '',
       },
     }
   },
@@ -51,6 +52,24 @@ export default {
     this.postData.publishedDate = postQuery.first_publication_date
     this.postData.slices = postQuery.data.body
     this.postData.tags = postQuery.tags
+
+    // Get URL for share image, if exists
+    // this.postData.slices.forEach((element) => {
+    //   if (element.slice_type === 'image' && element.slice_label === 'og_image') {
+    //     console.log(JSON.stringify(element.primary.image.url))
+    //     this.postData.ogImage = element.primary.image.url
+    //   }
+    // })
+    try {
+      this.postData.slices.forEach((element) => {
+        if (element.slice_type === 'image' && element.slice_label === 'og_image') {
+          this.postData.ogImage = element.primary.image.url
+        }
+      })
+    } catch {
+      this.postdata.ogImage =
+        'https://images.prismic.io/musa-blog/1da27244-9da1-4888-a15d-0c0df644cdfa_jr-korpa-CUNw8KZkqaU-unsplash.jpg?auto=compress,format'
+    }
   },
   head() {
     return {
@@ -61,16 +80,25 @@ export default {
           name: 'description',
           content: this.postSnippet,
         },
+        { hid: 'og:image', property: 'og:image', content: this.postData.ogImage },
       ],
     }
   },
   computed: {
     postTitle() {
-      return this.postData.data.post_title[0].text
+      try {
+        return this.postData.data.post_title[0].text
+      } catch {
+        return ''
+      }
     },
     postDate() {
-      const dt = DateTime.fromISO(this.postData.publishedDate)
-      return dt.toLocaleString(DateTime.DATE_FULL)
+      try {
+        const dt = DateTime.fromISO(this.postData.publishedDate)
+        return dt.toLocaleString(DateTime.DATE_FULL)
+      } catch {
+        return ''
+      }
     },
     postTags() {
       // return array of tags

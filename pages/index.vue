@@ -39,6 +39,17 @@ export default {
       posts: {},
     }
   },
+  async fetch() {
+    // Get home page
+    // this.home = (await this.$prismic.api.getSingle('home_page')).data
+    // this.hero = this.home.hero_group[0]
+
+    // Get blog posts
+    const prismicPostQuery = await this.$prismic.api.query(this.$prismic.predicates.at('document.type', 'posts'), {
+      orderings: '[document.last_publication_date desc]',
+    })
+    this.posts = prismicPostQuery.results
+  },
   head() {
     return {
       title: 'Musa Musayev',
@@ -51,20 +62,6 @@ export default {
         },
       ],
     }
-  },
-  async fetch() {
-    // Get home page
-    // this.home = (await this.$prismic.api.getSingle('home_page')).data
-    // this.hero = this.home.hero_group[0]
-
-    // Get blog posts
-    const prismicPostQuery = await this.$prismic.api.query(this.$prismic.predicates.at('document.type', 'posts'), {
-      orderings: '[document.last_publication_date desc]',
-    })
-    this.posts = prismicPostQuery.results
-  },
-  mounted() {
-    // console.log(`Posts: ${JSON.stringify(this.posts)}`)
   },
 }
 </script>

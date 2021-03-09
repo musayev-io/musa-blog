@@ -49,7 +49,8 @@ export default {
     this.imgAlt = this.slice.primary.image.alt
 
     // Get image caption, if exists
-    if (typeof this.slice.primary.caption[0].text !== 'undefined') {
+
+    if (this.slice.primary.caption[0].length > 1) {
       this.imgCaption = this.slice.primary.caption[0].text
     }
   },
