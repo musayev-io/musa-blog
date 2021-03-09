@@ -45,7 +45,7 @@ module.exports = {
   },
   plugins: [],
   purge: {
-    content: ['app/prismic/html-serializer.js'],
+    content: ['app/prismic/html-serializer.js', 'components/**/*.vue', 'layouts/**/*.vue', 'pages/**/*.vue'],
     // options: {
     //   // whitelist: ['list-decimal', 'list-disc', 'list-inside'],
     //   // whitelistPatterns: [/^p[x,y]-/, /^p-/],
