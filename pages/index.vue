@@ -12,7 +12,7 @@
       <span class="text-m-orange-2 font-display text-5xl font-bold mb-6"> Musa Musayev 🤙🏼 </span>
       <span class="text-m-blue-3 font-body font-light text-xl mb-2">
         I'm a developer and product owner specializing in serverless technologies built on AWS. Being self-taught, one
-        of the most useful resources I found was blogs from professionals whom I looked up to. My goal is to share m
+        of the most useful resources I found was blogs from professionals whom I looked up to. My goal is to share my
         thoughts and findings with others on a similar journey.
       </span>
     </section>
